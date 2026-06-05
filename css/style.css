@@ -3,8 +3,10 @@
    Light, Vibrant, Professional Theme
    ============================================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+/* --- Google Fonts ---
+   IMPORTANT: Fonts are loaded via <link> tags in HTML for better performance.
+   Do NOT use @import here as it blocks rendering.
+*/
 
 /* --- CSS Variables --- */
 :root {
