@@ -7,16 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // --- Preloader ---
   const preloader = document.getElementById('preloader');
-  window.addEventListener('load', function() {
+  if (preloader) {
+    // Hide preloader quickly after DOM is loaded for instant perceived performance
     setTimeout(() => {
       preloader.classList.add('loaded');
-    }, 600);
-  });
-
-  // Fallback: hide preloader after 3s max
-  setTimeout(() => {
-    if (preloader) preloader.classList.add('loaded');
-  }, 3000);
+    }, 300);
+  }
 
   // --- Navbar Scroll Effect ---
   const navbar = document.querySelector('.navbar-custom');
