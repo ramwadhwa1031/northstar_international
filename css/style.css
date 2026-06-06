@@ -1999,6 +1999,7 @@ ul {
 
   .navbar-custom > .container {
     flex-wrap: nowrap !important;
+    position: relative;
   }
 
   .navbar-brand {
@@ -2043,11 +2044,16 @@ ul {
   }
 
   .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    right: 12px;
+    width: 280px;
     background: var(--white);
     border-radius: var(--radius-md);
     padding: 20px;
     margin-top: 10px;
     box-shadow: var(--shadow-lg);
+    z-index: 1000;
   }
 }
 

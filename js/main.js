@@ -83,16 +83,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // --- Close Mobile Navigation on Link Click ---
+  // --- Close Mobile Navigation on Link Click & Click Outside ---
   const navbarCollapse = document.querySelector('.navbar-collapse');
   if (navbarCollapse) {
+    // Close on link click
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
       link.addEventListener('click', () => {
-        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
         if (bsCollapse) {
           bsCollapse.hide();
         }
       });
+    });
+
+    // Close on click outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideNavbar = navbarCollapse.contains(event.target);
+      const navbarToggler = document.querySelector('.navbar-toggler');
+      const isNavbarToggler = navbarToggler && navbarToggler.contains(event.target);
+      
+      if (!isClickInsideNavbar && !isNavbarToggler && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
     });
   }
 
