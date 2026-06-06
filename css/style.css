@@ -1449,8 +1449,16 @@ ul {
 }
 
 .about-image-sticky .about-image img {
-  height: auto;
-  min-height: 400px;
+  height: 600px;
+  min-height: 600px;
+  object-fit: cover;
+}
+
+@media (max-width: 991px) {
+  .about-image-sticky .about-image img {
+    height: 400px;
+    min-height: 400px;
+  }
 }
 
 .about-image:hover img {
@@ -4000,17 +4008,18 @@ a.client-gallery-card {
   justify-content: center;
   padding: 8px;
 }
-
 .brand-item.brand-item-logo img {
-  width: 85px;
-  height: 85px;
+  width: 105px;
+  height: 105px;
   object-fit: contain;
   background: white;
   border-radius: 16px;
-  padding: 10px;
+  padding: 14px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
   border: 1px solid rgba(0,0,0,0.05);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .brand-item.brand-item-logo:hover img {
@@ -4024,13 +4033,12 @@ a.client-gallery-card {
   }
 
   .brand-item.brand-item-logo img {
-    width: 65px !important;
-    height: 65px !important;
+    width: 80px !important;
+    height: 80px !important;
     border-radius: 12px;
-    padding: 8px !important;
+    padding: 10px !important;
   }
 }
-
 /* --- COLORFUL VIBRANT FOOTER --- */
 .footer.footer-colorful {
   background: linear-gradient(135deg, #0a1628 0%, #122040 25%, #1a3a6b 50%, #1d4580 75%, #0f2444 100%) !important;
