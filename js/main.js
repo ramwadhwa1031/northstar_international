@@ -54,16 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // --- Brand Marquee Duplicator (Ensures continuous scroll) ---
-  function initMarquee() {
-    const marquee = document.querySelector('.brands-marquee');
-    if (!marquee) return;
 
-    const items = marquee.innerHTML;
-    marquee.innerHTML = items + items;
-  }
-
-  initMarquee();
 
   // --- Smooth Scroll for Anchor Links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
