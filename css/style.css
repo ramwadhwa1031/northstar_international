@@ -1067,17 +1067,28 @@ ul {
   overflow: hidden;
 }
 
-.brands-marquee {
-  display: flex;
-  animation: marquee 30s linear infinite;
-  gap: 50px;
-  align-items: center;
-}
-
 .brands-marquee-wrapper {
+  --marquee-gap: 50px;
   display: flex;
   overflow: hidden;
+  user-select: none;
+  gap: var(--marquee-gap);
   padding: 20px 0;
+}
+
+@media (max-width: 767px) {
+  .brands-marquee-wrapper {
+    --marquee-gap: 20px;
+  }
+}
+
+.brands-marquee {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: var(--marquee-gap);
+  min-width: 100%;
+  animation: marquee-scroll 45s linear infinite;
 }
 
 .brand-item {
@@ -1105,9 +1116,9 @@ ul {
   transform: translateY(-3px);
 }
 
-@keyframes marquee {
+@keyframes marquee-scroll {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(calc(-100% - var(--marquee-gap))); }
 }
 
 /* --- Why Choose Us --- */
@@ -1986,6 +1997,15 @@ ul {
     --section-pad: 70px 0;
   }
 
+  .navbar-custom > .container {
+    flex-wrap: nowrap !important;
+  }
+
+  .navbar-brand {
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
   .navbar-brand img {
     height: 55px;
   }
@@ -2033,19 +2053,21 @@ ul {
 
 @media (max-width: 767px) {
   .navbar-brand img {
-    height: 60px;
+    height: 48px !important;
+    max-height: 48px !important;
   }
 
   .navbar-custom.scrolled .navbar-brand img {
-    height: 50px;
+    height: 42px !important;
+    max-height: 42px !important;
   }
 
   .navbar-brand .brand-name {
-    font-size: 1.15rem;
+    font-size: 1.05rem !important;
   }
 
   .navbar-brand .brand-tagline {
-    font-size: 0.65rem;
+    font-size: 0.58rem !important;
   }
 
   .hero-section {
@@ -2096,20 +2118,22 @@ ul {
 
 @media (max-width: 576px) {
   .navbar-brand img {
-    height: 52px;
+    height: 44px !important;
+    max-height: 44px !important;
   }
 
   .navbar-custom.scrolled .navbar-brand img {
-    height: 44px;
+    height: 38px !important;
+    max-height: 38px !important;
   }
 
   .navbar-brand .brand-name {
-    font-size: 1.05rem;
+    font-size: 0.95rem !important;
   }
 
   .navbar-brand .brand-tagline {
-    font-size: 0.58rem;
-    letter-spacing: 1px;
+    font-size: 0.52rem !important;
+    letter-spacing: 0.5px !important;
   }
 
   .hero-section {
@@ -2197,7 +2221,13 @@ ul {
 }
 
 .brands-marquee {
-  animation: marquee 45s linear infinite !important; /* slow it down to be extremely subtle and non-distracting */
+  animation: marquee-scroll 45s linear infinite !important; /* slow it down to be extremely subtle and non-distracting */
+}
+
+@media (max-width: 767px) {
+  .brands-marquee {
+    animation: marquee-scroll 30s linear infinite !important;
+  }
 }
 
 /* --- LOGO DIMENSIONS & BRAND VISIBILITY --- */
@@ -3260,17 +3290,21 @@ a.client-gallery-card {
 
 @media (max-width: 767px) {
   .brand-item.brand-item-logo {
-    min-width: 120px;
-    padding: 12px 16px;
+    min-width: 130px !important;
+    padding: 12px 14px !important;
+    gap: 6px !important;
   }
 
   .brand-item.brand-item-logo img {
-    max-width: 60px;
-    max-height: 30px;
+    width: 44px !important;
+    height: 44px !important;
+    max-width: none !important;
+    max-height: none !important;
+    padding: 6px !important;
   }
 
   .brand-item.brand-item-logo span {
-    font-size: 0.6rem;
+    font-size: 0.68rem !important;
   }
 }
 
