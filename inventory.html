@@ -18,6 +18,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
   <!-- Custom CSS -->
   <link href="css/style.css" rel="stylesheet">
   <!-- Favicon -->
@@ -47,6 +49,9 @@
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="inventory.html">Inventory</a>
@@ -89,30 +94,45 @@
       <!-- Filter Buttons -->
       <div class="inventory-filter-bar reveal">
         <button class="filter-btn active" data-filter="all">All Equipment</button>
-        <button class="filter-btn" data-filter="vmc">VMC</button>
-        <button class="filter-btn" data-filter="hmc">HMC</button>
-        <button class="filter-btn" data-filter="lathe">Lathes</button>
-        <button class="filter-btn" data-filter="mill">Milling</button>
-        <button class="filter-btn" data-filter="grind">Grinding</button>
-        <button class="filter-btn" data-filter="edm">EDM</button>
-        <button class="filter-btn" data-filter="boring">Boring</button>
-        <button class="filter-btn" data-filter="fabrication">Fabrication</button>
-        <button class="filter-btn" data-filter="robot">Robots</button>
+        <button class="filter-btn" data-filter="turning">CNC Turning Centers</button>
+        <button class="filter-btn" data-filter="vmc">Vertical Machining Centre VMC</button>
+        <button class="filter-btn" data-filter="hmc">Horizontal Machining Centres HMC</button>
+        <button class="filter-btn" data-filter="boring">CNC Boring</button>
+        <button class="filter-btn" data-filter="fabrication">Sheet Metal & Fabrication</button>
+        <button class="filter-btn" data-filter="other">Other Machines</button>
       </div>
 
       <!-- Inventory Grid -->
       <div class="row g-4">
 
-        <!-- VMC Cards -->
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-1" data-category="vmc">
+        <!-- CNC Turning Centers -->
+        <div class="col-lg-4 col-md-6 inventory-item reveal delay-1" data-category="turning">
           <div class="inventory-card">
             <div class="inventory-card-img">
-              <img src="pic/cnc-vmc.webp" alt="CNC Vertical Machining Center" width="600" height="400" loading="lazy">
+              <img src="pic/unnamed.jpg" alt="CNC Turning Center" width="600" height="400" loading="lazy">
               <span class="inventory-card-badge">In Stock</span>
             </div>
             <div class="inventory-card-body">
-              <h4>CNC Vertical Machining Centers (VMC)</h4>
-              <p>High-speed 3-axis, 4-axis, and 5-axis vertical machining centers with advanced CNC controls. Ideal for precision mold making, die manufacturing, aerospace components, and general purpose machining.</p>
+              <h4>CNC Turning Centers</h4>
+              <p>2-axis to multi-axis CNC turning centers with live tooling, sub-spindle, and Y-axis capabilities. From compact chucker lathes to large bore turning centers for heavy-duty applications.</p>
+              <div class="inventory-card-footer">
+                <span class="inventory-brands"><strong>Brands:</strong> Mazak, Mori Seiki, Doosan, Haas, Daewoo</span>
+                <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VMC -->
+        <div class="col-lg-4 col-md-6 inventory-item reveal delay-2" data-category="vmc">
+          <div class="inventory-card">
+            <div class="inventory-card-img">
+              <img src="pic/unnamed (1).jpg" alt="Vertical Machining Centre VMC" width="600" height="400" loading="lazy">
+              <span class="inventory-card-badge">In Stock</span>
+            </div>
+            <div class="inventory-card-body">
+              <h4>Vertical Machining Centre (VMC)</h4>
+              <p>High-speed 3-axis, 4-axis, and 5-axis vertical machining centers with advanced CNC controls. Ideal for precision mold making, die manufacturing, and aerospace components.</p>
               <div class="inventory-card-footer">
                 <span class="inventory-brands"><strong>Brands:</strong> Mazak, Haas, Hurco, Fadal, Makino</span>
                 <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
@@ -121,14 +141,15 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-2" data-category="hmc">
+        <!-- HMC -->
+        <div class="col-lg-4 col-md-6 inventory-item reveal delay-3" data-category="hmc">
           <div class="inventory-card">
             <div class="inventory-card-img">
-              <img src="pic/hero-cnc.webp" alt="CNC Horizontal Machining Center" width="600" height="400" loading="lazy">
+              <img src="pic/hero-cnc.webp" alt="Horizontal Machining Centre HMC" width="600" height="400" loading="lazy">
               <span class="inventory-card-badge">In Stock</span>
             </div>
             <div class="inventory-card-body">
-              <h4>CNC Horizontal Machining Centers (HMC)</h4>
+              <h4>Horizontal Machining Centres (HMC)</h4>
               <p>Multi-pallet horizontal machining centers for high-volume production with automatic tool changers holding 40–300+ tools. Full 4-axis and 5-axis capability for complex part geometries.</p>
               <div class="inventory-card-footer">
                 <span class="inventory-brands"><strong>Brands:</strong> Mazak, Okuma, Makino, Kitamura</span>
@@ -138,78 +159,11 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-3" data-category="lathe">
-          <div class="inventory-card">
-            <div class="inventory-card-img">
-              <img src="pic/cnc-lathe.webp" alt="CNC Turning Center" width="600" height="400" loading="lazy">
-              <span class="inventory-card-badge">In Stock</span>
-            </div>
-            <div class="inventory-card-body">
-              <h4>CNC Turning Centers & Lathes</h4>
-              <p>2-axis to multi-axis CNC turning centers with live tooling, sub-spindle, and Y-axis capabilities. From compact chucker lathes to large bore turning centers for heavy-duty applications.</p>
-              <div class="inventory-card-footer">
-                <span class="inventory-brands"><strong>Brands:</strong> Mazak, Mori Seiki, Doosan, Haas</span>
-                <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-1" data-category="mill">
-          <div class="inventory-card">
-            <div class="inventory-card-img">
-              <img src="pic/cnc-vmc.webp" alt="CNC Milling Machine" width="600" height="400" loading="lazy">
-              <span class="inventory-card-badge">Available</span>
-            </div>
-            <div class="inventory-card-body">
-              <h4>CNC Milling Machines</h4>
-              <p>Bed-type and knee-type CNC milling machines for versatile metalworking applications. Suitable for prototyping, tooling, and small to medium batch production with excellent accuracy.</p>
-              <div class="inventory-card-footer">
-                <span class="inventory-brands"><strong>Brands:</strong> Bridgeport, Fadal, Hurco, YCM</span>
-                <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-2" data-category="grind">
-          <div class="inventory-card">
-            <div class="inventory-card-img">
-              <img src="pic/hero-cnc.webp" alt="CNC Grinding Machine" width="600" height="400" loading="lazy">
-              <span class="inventory-card-badge">Available</span>
-            </div>
-            <div class="inventory-card-body">
-              <h4>CNC Grinding Machines</h4>
-              <p>CNC surface grinders, cylindrical grinders, centerless grinders, and tool & cutter grinders. Achieve mirror-finish surfaces and micron-level tolerances for critical components.</p>
-              <div class="inventory-card-footer">
-                <span class="inventory-brands"><strong>Brands:</strong> Okuma, Hardinge, Excel</span>
-                <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-3" data-category="edm">
-          <div class="inventory-card">
-            <div class="inventory-card-img">
-              <img src="pic/cnc-lathe.webp" alt="CNC EDM Machine" width="600" height="400" loading="lazy">
-              <span class="inventory-card-badge">Available</span>
-            </div>
-            <div class="inventory-card-body">
-              <h4>CNC EDM Machines</h4>
-              <p>Wire EDM and sinker/plunge EDM machines for complex die and mold work. Capable of machining hardened materials and intricate geometries with extreme precision using electrical discharge.</p>
-              <div class="inventory-card-footer">
-                <span class="inventory-brands"><strong>Brands:</strong> Mitsubishi, Fanuc, Makino</span>
-                <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- CNC Boring -->
         <div class="col-lg-4 col-md-6 inventory-item reveal delay-1" data-category="boring">
           <div class="inventory-card">
             <div class="inventory-card-img">
-              <img src="pic/hero-cnc.webp" alt="CNC Boring Machine" width="600" height="400" loading="lazy">
+              <img src="pic/cnc-vmc.webp" alt="CNC Boring Machine" width="600" height="400" loading="lazy">
               <span class="inventory-card-badge">On Request</span>
             </div>
             <div class="inventory-card-body">
@@ -223,10 +177,11 @@
           </div>
         </div>
 
+        <!-- Sheet Metal & Fabrication -->
         <div class="col-lg-4 col-md-6 inventory-item reveal delay-2" data-category="fabrication">
           <div class="inventory-card">
             <div class="inventory-card-img">
-              <img src="pic/cnc-vmc.webp" alt="Sheet Metal Equipment" width="600" height="400" loading="lazy">
+              <img src="pic/shipping.webp" alt="Sheet Metal & Fabrication Equipment" width="600" height="400" loading="lazy">
               <span class="inventory-card-badge">Available</span>
             </div>
             <div class="inventory-card-body">
@@ -240,17 +195,18 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 inventory-item reveal delay-3" data-category="robot">
+        <!-- Other Machines -->
+        <div class="col-lg-4 col-md-6 inventory-item reveal delay-3" data-category="other">
           <div class="inventory-card">
             <div class="inventory-card-img">
-              <img src="pic/about-office.webp" alt="Industrial Robots" width="600" height="400" loading="lazy">
+              <img src="pic/cnc-lathe.webp" alt="Other CNC Machines" width="600" height="400" loading="lazy">
               <span class="inventory-card-badge">Available</span>
             </div>
             <div class="inventory-card-body">
-              <h4>Industrial Robots & Automation</h4>
-              <p>Robotic arms and complete automation systems for pick-and-place, welding, palletizing, machine tending, and more. Integrate smart automation into your production workflow.</p>
+              <h4>Other Machines</h4>
+              <p>CNC grinding machines, EDM machines (wire & sinker), CNC milling machines, industrial robots & automation systems, and more. Custom sourcing available for specific requirements.</p>
               <div class="inventory-card-footer">
-                <span class="inventory-brands"><strong>Brands:</strong> Fanuc, Hyundai</span>
+                <span class="inventory-brands"><strong>Brands:</strong> Fanuc, Mitsubishi, Makino, ABB, KUKA</span>
                 <a href="contact.html" class="inventory-link">Inquire <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -323,12 +279,13 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer footer-colorful">
+    <div class="footer-top-accent"></div>
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-4">
           <div class="footer-brand">
-            <img src="pic/logo.svg" alt="Northstar Logo" width="40" height="40" loading="lazy">
+            <img src="pic/logo.svg" alt="Northstar Logo" width="75" height="75" loading="lazy">
             <span class="footer-brand-text">Northstar International LLC</span>
           </div>
           <p class="footer-description">
@@ -345,20 +302,21 @@
           <h5>Quick Links</h5>
           <ul class="footer-links">
             <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
+            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
             <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Inventory</a></li>
             <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
             <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Get a Quote</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-4">
-          <h5>Equipment</h5>
+          <h5>Our Inventory</h5>
           <ul class="footer-links">
+            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Turning Centers</a></li>
             <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> VMC Machines</a></li>
             <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> HMC Machines</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Lathes</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Mills</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> EDM & Grinding</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Robots & Automation</a></li>
+            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Boring</a></li>
+            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Sheet Metal & Fabrication</a></li>
+            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Other Machines</a></li>
           </ul>
         </div>
         <div class="col-lg-3 col-md-4">
@@ -390,6 +348,37 @@
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
     <i class="bi bi-arrow-up"></i>
   </button>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- Call Floating Button -->
+  <div class="call-float-wrapper" id="callFloatWrapper">
+    <div class="call-float-popup">
+      <div class="call-float-popup-title"><i class="bi bi-telephone-fill me-1"></i> Call Us Now</div>
+      <a href="tel:+18472624636">
+        <span class="call-popup-icon"><i class="bi bi-telephone-fill"></i></span>
+        <span class="call-popup-info">
+          <span class="call-popup-label">Phone 1</span>
+          <span class="call-popup-number">(847) 262-4636</span>
+        </span>
+      </a>
+      <a href="tel:+16465473828">
+        <span class="call-popup-icon"><i class="bi bi-telephone-fill"></i></span>
+        <span class="call-popup-info">
+          <span class="call-popup-label">Phone 2</span>
+          <span class="call-popup-number">(646) 547-3828</span>
+        </span>
+      </a>
+    </div>
+    <button class="call-float" aria-label="Call Us" onclick="this.parentElement.classList.toggle('active')">
+      <i class="bi bi-telephone-fill"></i>
+    </button>
+  </div>
 
   <!-- Bootstrap 5.3 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

@@ -1,36 +1,29 @@
 /* ============================================================
    NORTHSTAR INTERNATIONAL LLC - Main JavaScript
-   Animations, Interactions, and Motion Graphics
+   Functional interactions (No display animations)
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', function() {
   
-  // --- Preloader ---
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    // Hide preloader quickly after DOM is loaded for instant perceived performance
-    setTimeout(() => {
-      preloader.classList.add('loaded');
-    }, 300);
-  }
-
-  // --- Navbar Scroll Effect ---
+  // --- Navbar Scroll State & Back-to-Top Toggle ---
   const navbar = document.querySelector('.navbar-custom');
   const scrollTop = document.querySelector('.scroll-top');
 
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Navbar
-    if (scrollY > 50) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
+    // Navbar Scrolled background
+    if (navbar) {
+      if (scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     }
 
-    // Scroll to top button
+    // Scroll to top button visibility
     if (scrollTop) {
-      if (scrollY > 400) {
+      if (scrollY > 300) {
         scrollTop.classList.add('visible');
       } else {
         scrollTop.classList.remove('visible');
@@ -39,16 +32,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   window.addEventListener('scroll', handleScroll);
-  handleScroll();
+  handleScroll(); // Initial check
 
-  // Scroll to top click
+  // Scroll to top click event
   if (scrollTop) {
     scrollTop.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-  // --- Active Nav Link ---
+  // --- Active Nav Link Detection ---
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.nav-cta)');
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
@@ -61,120 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // --- Scroll Reveal Animations ---
-  function revealOnScroll() {
-    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
-    const windowHeight = window.innerHeight;
-
-    reveals.forEach(el => {
-      const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 120;
-
-      if (elementTop < windowHeight - revealPoint) {
-        el.classList.add('active');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // Initial check
-
-  // --- Hero Particles ---
-  function createParticles() {
-    const container = document.querySelector('.hero-particles');
-    if (!container) return;
-
-    const particleCount = 20;
-
-    for (let i = 0; i < particleCount; i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      
-      const size = Math.random() * 8 + 3;
-      const left = Math.random() * 100;
-      const duration = Math.random() * 15 + 10;
-      const delay = Math.random() * 10;
-
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.left = `${left}%`;
-      particle.style.animationDuration = `${duration}s`;
-      particle.style.animationDelay = `${delay}s`;
-
-      container.appendChild(particle);
-    }
-  }
-
-  createParticles();
-
-  // --- Counter Animation ---
-  function animateCounter(element, target, suffix = '') {
-    const duration = 2000;
-    const start = 0;
-    const startTime = performance.now();
-
-    function update(currentTime) {
-      const elapsed = currentTime - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      
-      // Ease out cubic
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(start + (target - start) * easeOut);
-      
-      element.textContent = current + suffix;
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  // Intersection Observer for counters
-  const counterElements = document.querySelectorAll('[data-counter]');
-  
-  if (counterElements.length > 0) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.dataset.counted) {
-          entry.target.dataset.counted = 'true';
-          const target = parseInt(entry.target.dataset.counter);
-          const suffix = entry.target.dataset.suffix || '';
-          animateCounter(entry.target, target, suffix);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counterElements.forEach(el => counterObserver.observe(el));
-  }
-
-  // --- Tilt Effect for Cards ---
-  function initTiltCards() {
-    const tiltCards = document.querySelectorAll('.tilt-card');
-
-    tiltCards.forEach(card => {
-      card.addEventListener('mousemove', function(e) {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 15;
-        const rotateY = (centerX - x) / 15;
-
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-      });
-
-      card.addEventListener('mouseleave', function() {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-      });
-    });
-  }
-
-  initTiltCards();
-
-  // --- Brand Marquee Duplication ---
+  // --- Brand Marquee Duplicator (Ensures continuous scroll) ---
   function initMarquee() {
     const marquee = document.querySelector('.brands-marquee');
     if (!marquee) return;
@@ -185,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   initMarquee();
 
-  // --- Smooth scroll for anchor links ---
+  // --- Smooth Scroll for Anchor Links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       const targetId = this.getAttribute('href');
@@ -194,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const target = document.querySelector(targetId);
       if (target) {
-        const offsetTop = target.offsetTop - 80;
+        const offsetTop = target.offsetTop - 85;
         window.scrollTo({
           top: offsetTop,
           behavior: 'smooth'
@@ -203,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // --- Close mobile navbar on link click ---
+  // --- Close Mobile Navigation on Link Click ---
   const navbarCollapse = document.querySelector('.navbar-collapse');
   if (navbarCollapse) {
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
@@ -216,14 +96,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Inventory Filter (Inventory Page) ---
+  // --- Inventory Search/Filter (Inventory Page) ---
   const filterBtns = document.querySelectorAll('.filter-btn');
   const inventoryCards = document.querySelectorAll('.inventory-item');
 
   if (filterBtns.length > 0) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', function() {
-        // Remove active from all
         filterBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
 
@@ -232,7 +111,6 @@ document.addEventListener('DOMContentLoaded', function() {
         inventoryCards.forEach(card => {
           if (filter === 'all' || card.dataset.category === filter) {
             card.style.display = '';
-            card.style.animation = 'fadeInUp 0.5s ease forwards';
           } else {
             card.style.display = 'none';
           }
@@ -241,18 +119,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Contact Form Handling ---
+  // --- Contact Form Submission & Mailto Composer ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
       
-      // Get form data
       const formData = new FormData(contactForm);
       const data = {};
       formData.forEach((value, key) => data[key] = value);
 
-      // Simple validation
       let isValid = true;
       const requiredFields = contactForm.querySelectorAll('[required]');
       requiredFields.forEach(field => {
@@ -265,22 +141,36 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       if (isValid) {
-        // Show success message
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Message Sent!';
-        submitBtn.style.background = 'linear-gradient(135deg, #2ec4b6, #14b8a6)';
+        submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Inquiry Ready!';
+        submitBtn.style.background = '#2ec4b6';
         submitBtn.disabled = true;
 
-        // Compose mailto link
-        const mailtoLink = `mailto:atulgupta2077@rediffmail.com?subject=${encodeURIComponent('Inquiry from ' + (data.name || 'Website'))}&body=${encodeURIComponent(
-          'Name: ' + (data.name || '') + '\n' +
-          'Email: ' + (data.email || '') + '\n' +
-          'Phone: ' + (data.phone || '') + '\n' +
-          'Company: ' + (data.company || '') + '\n\n' +
-          'Message:\n' + (data.message || '')
-        )}`;
+        // Formulate corporate email body
+        const mailSubject = `Machinery Inquiry from ${data.name} (${data.company || 'Direct Client'})`;
+        const mailBody = `Dear Northstar International Team,
 
+I am interested in purchasing CNC equipment. Please find my inquiry details below:
+
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || 'N/A'}
+Company: ${data.company || 'N/A'}
+Country: ${data.country || 'N/A'}
+Interested In: ${data.interest || 'General CNC Machinery'}
+
+Detailed Requirements:
+${data.message}
+
+Please reply with the availability, detailed specifications, pricing, and freight options for shipping.
+
+Best regards,
+${data.name}`;
+
+        const mailtoLink = `mailto:atulgupta2077@rediffmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+        // Open user's email client
         window.location.href = mailtoLink;
 
         setTimeout(() => {
@@ -292,7 +182,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    // Remove invalid on input
     contactForm.querySelectorAll('[required]').forEach(field => {
       field.addEventListener('input', function() {
         if (this.value.trim()) {
@@ -302,90 +191,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Typing Effect for Hero ---
-  function typeWriter(element, texts, speed = 80, deleteSpeed = 40, pauseTime = 2000) {
-    if (!element) return;
-
-    let textIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function type() {
-      const currentText = texts[textIndex];
-      
-      if (isDeleting) {
-        element.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-      } else {
-        element.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-      }
-
-      if (!isDeleting && charIndex === currentText.length) {
-        setTimeout(() => {
-          isDeleting = true;
-          type();
-        }, pauseTime);
-        return;
-      }
-
-      if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-      }
-
-      setTimeout(type, isDeleting ? deleteSpeed : speed);
-    }
-
-    type();
-  }
-
-  const typingEl = document.querySelector('.typing-text');
-  if (typingEl) {
-    const texts = [
-      'CNC Vertical Machining Centers',
-      'CNC Turning Centers & Lathes',
-      'CNC Milling & Grinding Machines',
-      'Industrial Robots & Automation',
-      'Sheet Metal & Fabrication Equipment'
-    ];
-    typeWriter(typingEl, texts);
-  }
-
-  // --- Parallax effect for floating elements ---
-  window.addEventListener('mousemove', function(e) {
-    const floatingElements = document.querySelectorAll('.parallax-float');
-    const mouseX = e.clientX / window.innerWidth - 0.5;
-    const mouseY = e.clientY / window.innerHeight - 0.5;
-
-    floatingElements.forEach(el => {
-      const speed = el.dataset.speed || 20;
-      const x = mouseX * speed;
-      const y = mouseY * speed;
-      el.style.transform = `translate(${x}px, ${y}px)`;
+  // --- Simple Counter Logic (Runs instantly on visible elements) ---
+  const counterElements = document.querySelectorAll('[data-counter]');
+  if (counterElements.length > 0) {
+    counterElements.forEach(el => {
+      const target = parseInt(el.dataset.counter);
+      const suffix = el.dataset.suffix || '';
+      el.textContent = target + suffix; // Instantly set the number instead of animating it as animations were removed
     });
-  });
-
-  // --- Image lazy loading with fade effect ---
-  const lazyImages = document.querySelectorAll('img[data-src]');
-  if (lazyImages.length > 0) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.removeAttribute('data-src');
-          img.style.opacity = '0';
-          img.onload = function() {
-            img.style.transition = 'opacity 0.5s ease';
-            img.style.opacity = '1';
-          };
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-
-    lazyImages.forEach(img => imageObserver.observe(img));
   }
 
 });

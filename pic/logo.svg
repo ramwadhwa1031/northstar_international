@@ -1,71 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
   <defs>
-    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a3a6b"/>
-      <stop offset="100%" style="stop-color:#2a5298"/>
+    <linearGradient id="navyDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a1628;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a3a6b;stop-opacity:1"/>
     </linearGradient>
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e63946"/>
-      <stop offset="100%" style="stop-color:#ff6b6b"/>
-    </linearGradient>
-    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a3a6b"/>
-      <stop offset="50%" style="stop-color:#2a5298"/>
-      <stop offset="100%" style="stop-color:#3a6ea5"/>
+    <linearGradient id="goldBronze" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B6914;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#C49B30;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#A07818;stop-opacity:1"/>
     </linearGradient>
   </defs>
   
-  <!-- Outer circle ring -->
-  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#ringGrad)" stroke-width="4"/>
-  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#ringGrad)" stroke-width="1.5" opacity="0.3"/>
-  
-  <!-- Inner circle background -->
-  <circle cx="100" cy="100" r="78" fill="url(#starGrad)" opacity="0.06"/>
-  
-  <!-- Gear teeth around the circle (industrial element) -->
-  <g fill="url(#ringGrad)" opacity="0.6">
-    <rect x="96" y="2" width="8" height="14" rx="2"/>
-    <rect x="96" y="184" width="8" height="14" rx="2"/>
-    <rect x="2" y="96" width="14" height="8" rx="2"/>
-    <rect x="184" y="96" width="14" height="8" rx="2"/>
+  <g transform="translate(40, 40)">
+    <!-- Gear teeth (gold/bronze) - 12 teeth -->
+    <g fill="url(#goldBronze)">
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(0)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(30)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(60)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(90)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(120)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(150)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(180)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(210)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(240)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(270)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(300)"/>
+      <rect x="-3.5" y="-34" width="7" height="8" rx="1.5" transform="rotate(330)"/>
+    </g>
     
-    <rect x="152" y="16" width="8" height="14" rx="2" transform="rotate(30 156 23)"/>
-    <rect x="40" y="170" width="8" height="14" rx="2" transform="rotate(30 44 177)"/>
-    <rect x="16" y="40" width="14" height="8" rx="2" transform="rotate(30 23 44)"/>
-    <rect x="170" y="152" width="14" height="8" rx="2" transform="rotate(30 177 156)"/>
+    <!-- Gear ring -->
+    <circle cx="0" cy="0" r="28" fill="none" stroke="url(#goldBronze)" stroke-width="4"/>
     
-    <rect x="170" y="40" width="14" height="8" rx="2" transform="rotate(-30 177 44)"/>
-    <rect x="16" y="152" width="14" height="8" rx="2" transform="rotate(-30 23 156)"/>
-    <rect x="40" y="16" width="8" height="14" rx="2" transform="rotate(-30 44 23)"/>
-    <rect x="152" y="170" width="8" height="14" rx="2" transform="rotate(-30 156 177)"/>
+    <!-- Inner navy background -->
+    <circle cx="0" cy="0" r="25" fill="url(#navyDark)"/>
+    
+    <!-- Compass rose - 4 cardinal points -->
+    <polygon points="0,-23 -5,-6 0,-9 5,-6" fill="#1a3a6b"/>
+    <polygon points="0,23 -5,6 0,9 5,6" fill="#2a5298"/>
+    <polygon points="23,0 6,-5 9,0 6,5" fill="#2a5298"/>
+    <polygon points="-23,0 -6,-5 -9,0 -6,5" fill="#1a3a6b"/>
+    
+    <!-- Compass rose - 4 intercardinal points -->
+    <polygon points="16,-16 0,-4 -1,1 4,0" fill="#3a6ea5"/>
+    <polygon points="16,16 4,0 -1,-1 0,4" fill="#4a7eb5" opacity="0.8"/>
+    <polygon points="-16,16 0,4 1,-1 -4,0" fill="#3a6ea5"/>
+    <polygon points="-16,-16 -4,0 1,1 0,-4" fill="#4a7eb5" opacity="0.8"/>
+    
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="4" fill="url(#goldBronze)" stroke="#0a1628" stroke-width="1"/>
+    <circle cx="0" cy="0" r="2" fill="#D4AD3C"/>
   </g>
-  
-  <!-- North Star - Main 4-point star -->
-  <polygon points="100,30 108,85 100,75 92,85" fill="url(#accentGrad)"/>
-  <polygon points="100,170 108,115 100,125 92,115" fill="url(#starGrad)"/>
-  <polygon points="30,100 85,92 75,100 85,108" fill="url(#starGrad)"/>
-  <polygon points="170,100 115,92 125,100 115,108" fill="url(#starGrad)"/>
-  
-  <!-- North Star - Diagonal 4-point star -->
-  <polygon points="50,50 88,88 82,92 46,58" fill="url(#starGrad)" opacity="0.7"/>
-  <polygon points="150,50 112,88 118,92 154,58" fill="url(#starGrad)" opacity="0.7"/>
-  <polygon points="50,150 88,112 92,118 58,154" fill="url(#starGrad)" opacity="0.7"/>
-  <polygon points="150,150 112,112 108,118 142,154" fill="url(#starGrad)" opacity="0.7"/>
-  
-  <!-- Center circle -->
-  <circle cx="100" cy="100" r="18" fill="url(#starGrad)"/>
-  <circle cx="100" cy="100" r="12" fill="url(#accentGrad)"/>
-  <circle cx="100" cy="100" r="5" fill="#ffffff"/>
-  
-  <!-- Small "N" in center -->
-  <text x="100" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-weight="900" font-size="10" fill="#1a3a6b">N</text>
-  
-  <!-- "NORTHSTAR" text arc at bottom -->
-  <path id="bottomArc" d="M 35,140 A 80,80 0 0,0 165,140" fill="none"/>
-  <text font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="url(#starGrad)" letter-spacing="3">
-    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">NORTHSTAR</textPath>
-  </text>
-  
-  <!-- Small star at top to mark North -->
-  <polygon points="100,22 102,26 106,26 103,29 104,33 100,31 96,33 97,29 94,26 98,26" fill="url(#accentGrad)"/>
 </svg>
