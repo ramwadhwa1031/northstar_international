@@ -2033,19 +2033,19 @@ ul {
 
 @media (max-width: 767px) {
   .navbar-brand img {
-    height: 48px;
+    height: 60px;
   }
 
   .navbar-custom.scrolled .navbar-brand img {
-    height: 40px;
+    height: 50px;
   }
 
   .navbar-brand .brand-name {
-    font-size: 0.9rem;
+    font-size: 1.15rem;
   }
 
   .navbar-brand .brand-tagline {
-    font-size: 0.45rem;
+    font-size: 0.65rem;
   }
 
   .hero-section {
@@ -2096,19 +2096,19 @@ ul {
 
 @media (max-width: 576px) {
   .navbar-brand img {
-    height: 42px;
+    height: 52px;
   }
 
   .navbar-custom.scrolled .navbar-brand img {
-    height: 36px;
+    height: 44px;
   }
 
   .navbar-brand .brand-name {
-    font-size: 0.8rem;
+    font-size: 1.05rem;
   }
 
   .navbar-brand .brand-tagline {
-    font-size: 0.4rem;
+    font-size: 0.58rem;
     letter-spacing: 1px;
   }
 
@@ -2201,16 +2201,18 @@ ul {
 }
 
 /* --- LOGO DIMENSIONS & BRAND VISIBILITY --- */
-.navbar-brand img {
-  height: 95px !important;
-  max-height: 95px !important;
-  width: auto !important;
-  transition: none !important;
-}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 95px !important;
+    max-height: 95px !important;
+    width: auto !important;
+    transition: none !important;
+  }
 
-.navbar-custom.scrolled .navbar-brand img {
-  height: 75px !important;
-  max-height: 75px !important;
+  .navbar-custom.scrolled .navbar-brand img {
+    height: 75px !important;
+    max-height: 75px !important;
+  }
 }
 
 .footer-brand img {

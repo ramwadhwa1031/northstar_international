@@ -201,4 +201,14 @@ ${data.name}`;
     });
   }
 
+  // --- Close Floating Call Popup on outside click ---
+  const callWrapper = document.getElementById('callFloatWrapper');
+  if (callWrapper) {
+    document.addEventListener('click', function(e) {
+      if (!callWrapper.contains(e.target)) {
+        callWrapper.classList.remove('active');
+      }
+    });
+  }
+
 });
