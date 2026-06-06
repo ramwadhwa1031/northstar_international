@@ -226,4 +226,36 @@ ${data.name}`;
     });
   }
 
+  // --- Create blurred background for machine carousels ---
+  const carouselImages = document.querySelectorAll('.machine-carousel .carousel-item img');
+  carouselImages.forEach(img => {
+    const parent = img.parentElement;
+    if (parent && !parent.querySelector('.carousel-bg-blur')) {
+      const bgImg = document.createElement('img');
+      bgImg.src = img.src;
+      bgImg.className = 'carousel-bg-blur';
+      bgImg.alt = '';
+      bgImg.loading = 'lazy';
+      parent.insertBefore(bgImg, img);
+    }
+  });
+
+  // --- Explicitly Initialize Bootstrap Carousels ---
+  const carousels = document.querySelectorAll('.carousel');
+  carousels.forEach(carousel => {
+    try {
+      if (typeof bootstrap !== 'undefined') {
+        const bsCarousel = new bootstrap.Carousel(carousel, {
+          interval: parseInt(carousel.getAttribute('data-bs-interval')) || 4000,
+          ride: 'carousel',
+          wrap: true,
+          pause: false
+        });
+        bsCarousel.cycle();
+      }
+    } catch (err) {
+      console.error('Failed to initialize carousel:', err);
+    }
+  });
+
 });
