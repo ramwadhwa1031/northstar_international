@@ -2153,11 +2153,11 @@ ul {
 
 .brands-marquee-wrapper {
   display: flex;
-  overflow: visible;
+  overflow: hidden;
   justify-content: center;
   flex-wrap: nowrap;
-  gap: 20px;
-  padding: 24px 0;
+  gap: 0;
+  padding: 24px 16px;
   user-select: none;
 }
 
@@ -2169,13 +2169,12 @@ ul {
 
 .brands-marquee {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 5px;
-  width: 87%;
+  width: 100%;
   min-width: auto;
-  /* disable marquee animation completely */
+  gap: 0;
 }
 
 .brand-item {
@@ -2187,12 +2186,12 @@ ul {
 }
 
 .brand-img-direct {
-  max-height: 60px;
-  /* Reduced to help fit better on smaller screens */
-  flex: 1 1 0;
-  min-width: 0;
-  width: 100%;
+  height: 45px;
+  max-height: 45px;
+  width: auto;
+  max-width: 90px;
   object-fit: contain;
+  flex-shrink: 0;
   margin: 0;
   transition: var(--transition);
 }
@@ -3543,13 +3542,12 @@ ul {
 }
 
 .brands-marquee {
-  animation: marquee-scroll 45s linear infinite !important;
-  /* slow it down to be extremely subtle and non-distracting */
+  animation: none !important;
 }
 
 @media (max-width: 767px) {
   .brands-marquee {
-    animation: marquee-scroll 30s linear infinite !important;
+    animation: none !important;
   }
 }
 
