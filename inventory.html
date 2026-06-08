@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse our current inventory of premium used CNC machines — VMC, HMC, Milling, and Grinding machines with full specifications. EXCEL PMC 10T24, Bridgeport 3020, Doosan DHP 4000 and more.">
-  <meta name="keywords" content="used CNC inventory, EXCEL PMC 10T24, Bridgeport 3020, Doosan DHP 4000, CNC VMC for sale, used milling machine, used grinding machine">
+  <meta name="description"
+    content="Browse our current inventory of premium used CNC machines — VMC, HMC, Milling, and Grinding machines with full specifications. EXCEL PMC 10T24, Bridgeport 3020, Doosan DHP 4000 and more.">
+  <meta name="keywords"
+    content="used CNC inventory, EXCEL PMC 10T24, Bridgeport 3020, Doosan DHP 4000, CNC VMC for sale, used milling machine, used grinding machine">
   <meta name="author" content="Northstar International LLC">
   <title>Our Inventory | Northstar International LLC</title>
 
@@ -12,7 +15,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Google Fonts (non-render-blocking) -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Bootstrap 5.3 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +30,7 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="pic/logo.jpg">
 </head>
+
 <body class="page-transition">
 
   <!-- Preloader -->
@@ -32,420 +38,311 @@
     <div class="preloader-spinner"></div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="pic/logo.jpg" alt="North Star International LLC">
-        <div class="brand-text">
-          <span class="brand-name"><span class="brand-main">NorthStar</span> <span class="brand-sub">International LLC</span></span>
+  <!-- Sticky Header -->
+  <div class="sticky-header" id="stickyHeader">
+    <!-- Top Contact Bar -->
+    <div class="top-contact-bar" id="topBar">
+      <div class="container">
+        <div class="top-bar-inner">
+          <a href="mailto:atulgupta2077@rediffmail.com" class="top-bar-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>atulgupta2077@rediffmail.com</span>
+          </a>
+          <a href="tel:+18472624636" class="top-bar-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>(847) 262-4636</span>
+          </a>
+          <a href="tel:+16465473828" class="top-bar-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>(646) 547-3828</span>
+          </a>
         </div>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="inventory.html">Inventory</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <li class="nav-item ms-lg-2">
-            <a class="nav-link nav-cta" href="contact.html"><i class="bi bi-envelope me-1"></i> Get a Quote</a>
-          </li>
-        </ul>
       </div>
     </div>
-  </nav>
 
-  <!-- Page Header -->
-  <section class="page-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="index.html"><i class="bi bi-house me-1"></i>Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Inventory</li>
-            </ol>
-          </nav>
-          <h1>Our <span style="color: var(--gold);">Machine Inventory</span></h1>
-          <p style="font-size: 1.1rem; opacity: 0.85; max-width: 600px;">
-            Explore our current stock of high-quality used CNC machines sourced directly from U.S. manufacturing facilities. Each machine includes detailed specifications and multiple photographs.
-          </p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo_icon.png" alt="NorthStar International">
+          <div class="brand-text">
+            <span class="brand-name"><span class="brand-main">NorthStar</span> <span
+                class="brand-sub">International</span></span>
+            <span class="brand-tagline">Premium CNC Machines from USA</span>
+          </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="inventory.html">Inventory</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <div class="nav-social-icons">
+                <a href="#" aria-label="Facebook" class="nav-social-link"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="LinkedIn" class="nav-social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email" class="nav-social-link"><i
+                    class="bi bi-envelope-fill"></i></a>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </nav>
+  </div>
 
   <!-- Inventory Detail Section -->
   <section class="inventory-detail-section">
     <div class="container">
+      <!-- Filter Buttons -->
+      <div class="row mb-5 reveal">
+        <div class="col-12 text-center">
+          <div class="d-flex flex-wrap justify-content-center gap-2">
+            <button class="btn btn-outline-primary filter-btn active" data-filter="all">All Machines</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="turning">CNC Turning Centers</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="vmc">Vertical Machining Centre VMC</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="hmc">Horizontal Machining Centres
+              HMC</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="milling">Milling</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="grinding">Grinding</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="fabrication">Sheet Metal &
+              Fabrication</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="other">Other Machines</button>
+          </div>
+        </div>
+      </div>
+
       <div class="row g-4">
 
-        <!-- Machine 1: EXCEL PMC 10T24 -->
-        <div class="col-lg-4 col-md-6 col-sm-12 reveal" id="machine-excel-pmc">
-          <div class="machine-detail-card">
-            <div class="machine-detail-inner">
-              <div class="machine-gallery">
-                <div id="carouselExcel" class="carousel slide machine-carousel" data-bs-ride="carousel" data-bs-interval="4000">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExcel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExcel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExcel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="pic/vertical_machine/WhatsApp Image 2026-06-06 at 12.08.45.webp" alt="EXCEL PMC 10T24 - Front View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/vertical_machine/WhatsApp Image 2026-06-06 at 12.08.46.webp" alt="EXCEL PMC 10T24 - Side View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/vertical_machine/WhatsApp Image 2026-06-06 at 12.08.46 (1).webp" alt="EXCEL PMC 10T24 - Control Panel" loading="lazy">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExcel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExcel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <span class="machine-status-badge in-stock"><i class="bi bi-check-circle-fill"></i> In Stock</span>
-              </div>
-              <div class="machine-info">
-                <div class="machine-category-tag"><i class="bi bi-gear-fill"></i> Vertical Machining Centre</div>
-                <h2 class="machine-title">EXCEL PMC 10T24</h2>
-                <div class="machine-specs-grid">
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-cpu"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Controller</span>
-                      <span class="spec-value">FANUC 21M</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">table_chart</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Table Size</span>
-                      <span class="spec-value">1075 x 500</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-arrows-move"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Travel</span>
-                      <span class="spec-value">1000x500x550</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">settings</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Spindle</span>
-                      <span class="spec-value">BT40</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-lightning-charge-fill"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Motor</span>
-                      <span class="spec-value">15 Hp</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">swap_vert</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">ATC</span>
-                      <span class="spec-value">22 tools</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-speedometer2"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Speed</span>
-                      <span class="spec-value">8000 Rpm</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="machine-action-bar">
-                  <a href="contact.html" class="btn-primary-custom"><i class="bi bi-envelope"></i> Inquire</a>
-                  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inquiry"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                </div>
+        <!-- Machine 1: EXCEL PMC 10T24 (Redesigned Card) -->
+        <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="vmc" id="machine-excel-pmc">
+          <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative" style="height: 250px;">
+              <!-- Still Image -->
+              <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.45.jpeg" alt="EXCEL PMC 10T24"
+                style="width: 100%; height: 100%; object-fit: cover;">
+              <!-- View More Images Button -->
+              <button class="btn btn-light position-absolute btn-sm"
+                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
+                data-bs-toggle="modal" data-bs-target="#modalExcelImages">
+                <i class="bi bi-images"></i> View Gallery
+              </button>
+            </div>
+            <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
+              <div class="machine-category-tag"><i class="bi bi-gear-fill"></i> Vertical Machining Centre</div>
+              <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">EXCEL PMC
+                10T24</h2>
+
+              <ul class="machine-specs-bullets"
+                style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; color: var(--dark-gray);">
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Controller:</strong> FANUC 21M</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Table:</strong> 1075 x 500</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Travel:</strong> 1000 x 500 x 550
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Spindle:</strong> BT40</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Motor:</strong> 15 Hp</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>ATC:</strong> 22 tools</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Speed:</strong> 8000 Rpm</li>
+              </ul>
+
+              <div class="machine-action-bar mt-auto flex-wrap" style="gap: 10px;">
+                <a href="contact.html" class="btn-primary-custom"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-envelope"></i> Inquire</a>
+                <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer"
+                  class="btn-whatsapp-inquiry"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-whatsapp"></i> WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Machine 2: BRIDGEPORT 3020 -->
-        <div class="col-lg-4 col-md-6 col-sm-12 reveal" id="machine-bridgeport">
-          <div class="machine-detail-card">
-            <div class="machine-detail-inner">
-              <div class="machine-gallery">
-                <div id="carouselBridgeport" class="carousel slide machine-carousel" data-bs-ride="carousel" data-bs-interval="4500">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselBridgeport" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselBridgeport" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselBridgeport" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselBridgeport" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselBridgeport" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselBridgeport" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="pic/bridge_port/WhatsApp Image 2026-06-06 at 12.15.50.webp" alt="Bridgeport 3020 - Full View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/bridge_port/WhatsApp Image 2026-06-06 at 12.15.49.webp" alt="Bridgeport 3020 - Overview" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/bridge_port/WhatsApp Image 2026-06-06 at 12.09.13.webp" alt="Bridgeport 3020 - Front View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/bridge_port/WhatsApp Image 2026-06-06 at 12.09.13 (1).webp" alt="Bridgeport 3020 - Side View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/bridge_port/WhatsApp Image 2026-06-06 at 12.09.13 (2).webp" alt="Bridgeport 3020 - Controller" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/bridge_port/WhatsApp Image 2026-06-06 at 12.09.13 (3).webp" alt="Bridgeport 3020 - Detail" loading="lazy">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselBridgeport" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselBridgeport" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <span class="machine-status-badge in-stock"><i class="bi bi-check-circle-fill"></i> In Stock</span>
-              </div>
-              <div class="machine-info">
-                <div class="machine-category-tag"><i class="bi bi-gear-fill"></i> Vertical Machining Centre</div>
-                <h2 class="machine-title">BRIDGEPORT 3020</h2>
-                <div class="machine-specs-grid">
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-cpu"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Controller</span>
-                      <span class="spec-value">FANUC 21iM</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">table_chart</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Table Size</span>
-                      <span class="spec-value">900 x 450</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-arrows-move"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Travel</span>
-                      <span class="spec-value">750x500x500</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">settings</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Taper</span>
-                      <span class="spec-value">BT40</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">swap_vert</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Turret</span>
-                      <span class="spec-value">22 tools</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-speedometer2"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Speed</span>
-                      <span class="spec-value">10000 Rpm</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="machine-action-bar">
-                  <a href="contact.html" class="btn-primary-custom"><i class="bi bi-envelope"></i> Inquire</a>
-                  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inquiry"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                </div>
+        <!-- Machine 2: BRIDGEPORT 3020 (Redesigned Card) -->
+        <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="vmc" id="machine-bridgeport">
+          <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative" style="height: 250px;">
+              <!-- Still Image -->
+              <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(1).jpeg" alt="BRIDGEPORT 3020"
+                style="width: 100%; height: 100%; object-fit: cover;">
+              <!-- View More Images Button -->
+              <button class="btn btn-light position-absolute btn-sm"
+                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
+                data-bs-toggle="modal" data-bs-target="#modalBridgeportImages">
+                <i class="bi bi-images"></i> View Gallery
+              </button>
+            </div>
+            <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
+              <div class="machine-category-tag"><i class="bi bi-gear-fill"></i> Vertical Machining Centre</div>
+              <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">BRIDGEPORT
+                3020</h2>
+
+              <ul class="machine-specs-bullets"
+                style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; color: var(--dark-gray);">
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Controller:</strong> FANUC 21iM
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Table:</strong> 900 x 450</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Travel:</strong> 750 x 500 x 500
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Taper:</strong> BT40</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Turret:</strong> 22 tools</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Speed:</strong> 10000 Rpm</li>
+              </ul>
+
+              <div class="machine-action-bar mt-auto flex-wrap" style="gap: 10px;">
+                <a href="contact.html" class="btn-primary-custom"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-envelope"></i> Inquire</a>
+                <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer"
+                  class="btn-whatsapp-inquiry"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-whatsapp"></i> WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Machine 3: DOOSAN DHP 4000 -->
-        <div class="col-lg-4 col-md-6 col-sm-12 reveal" id="machine-doosan">
-          <div class="machine-detail-card">
-            <div class="machine-detail-inner">
-              <div class="machine-gallery">
-                <div id="carouselDoosan" class="carousel slide machine-carousel" data-bs-ride="carousel" data-bs-interval="5000">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselDoosan" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselDoosan" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselDoosan" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="pic/DOOSAN/WhatsApp Image 2026-06-06 at 12.15.50 (1).webp" alt="Doosan DHP 4000 - Front View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/DOOSAN/WhatsApp Image 2026-06-06 at 12.15.50.webp" alt="Doosan DHP 4000 - Side View" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/DOOSAN/WhatsApp Image 2026-06-06 at 12.15.49.webp" alt="Doosan DHP 4000 - Detail View" loading="lazy">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselDoosan" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselDoosan" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <span class="machine-status-badge in-stock"><i class="bi bi-check-circle-fill"></i> In Stock</span>
-              </div>
-              <div class="machine-info">
-                <div class="machine-category-tag" style="background: rgba(244,162,97,0.1); color: var(--gold);"><i class="bi bi-gear-fill"></i> Horizontal Machining Centre</div>
-                <h2 class="machine-title">DOOSAN DHP 4000</h2>
-                <div class="machine-specs-grid">
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-cpu"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Controller</span>
-                      <span class="spec-value">FANUC 18i MB</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">table_chart</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Table Size</span>
-                      <span class="spec-value">400 x 400</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-arrows-move"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Travel</span>
-                      <span class="spec-value">600x560x600</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><span class="material-icons-outlined">settings</span></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Taper</span>
-                      <span class="spec-value">CAT 40</span>
-                    </div>
-                  </div>
-                  <div class="spec-item">
-                    <div class="spec-icon"><i class="bi bi-speedometer2"></i></div>
-                    <div class="spec-content">
-                      <span class="spec-label">Speed</span>
-                      <span class="spec-value">12000 Rpm</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="machine-action-bar">
-                  <a href="contact.html" class="btn-primary-custom"><i class="bi bi-envelope"></i> Inquire</a>
-                  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inquiry"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                </div>
+        <!-- Machine 3: DOOSAN DHP 4000 (Redesigned Card) -->
+        <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="hmc" id="machine-doosan">
+          <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative" style="height: 250px;">
+              <!-- Still Image -->
+              <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50%20(1).jpeg" alt="DOOSAN DHP 4000"
+                style="width: 100%; height: 100%; object-fit: cover;">
+              <!-- View More Images Button -->
+              <button class="btn btn-light position-absolute btn-sm"
+                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
+                data-bs-toggle="modal" data-bs-target="#modalDoosanImages">
+                <i class="bi bi-images"></i> View Gallery
+              </button>
+            </div>
+            <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
+              <div class="machine-category-tag" style="background: rgba(244,162,97,0.1); color: var(--gold);"><i
+                  class="bi bi-gear-fill"></i> Horizontal Machining Centre</div>
+              <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">DOOSAN DHP
+                4000</h2>
+
+              <ul class="machine-specs-bullets"
+                style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; color: var(--dark-gray);">
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Controller:</strong> FANUC 18i MB
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Table:</strong> 400 x 400</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Travel:</strong> 600 x 560 x 600
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Taper:</strong> CAT 40</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Speed:</strong> 12000 Rpm</li>
+              </ul>
+
+              <div class="machine-action-bar mt-auto flex-wrap" style="gap: 10px;">
+                <a href="contact.html" class="btn-primary-custom"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-envelope"></i> Inquire</a>
+                <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer"
+                  class="btn-whatsapp-inquiry"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-whatsapp"></i> WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Machine 4: Milling Machine -->
-        <div class="col-lg-4 col-md-6 col-sm-12 reveal" id="machine-milling">
-          <div class="machine-detail-card">
-            <div class="machine-detail-inner">
-              <div class="machine-gallery">
-                <div id="carouselMilling" class="carousel slide machine-carousel" data-bs-ride="carousel" data-bs-interval="4200">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselMilling" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselMilling" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="pic/Milling/WhatsApp Image 2026-06-06 at 12.18.14.webp" alt="Milling Machine - View 1" loading="lazy">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="pic/Milling/WhatsApp Image 2026-06-06 at 12.18.14 (1).webp" alt="Milling Machine - View 2" loading="lazy">
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselMilling" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselMilling" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-                <span class="machine-status-badge in-stock"><i class="bi bi-check-circle-fill"></i> In Stock</span>
-              </div>
-              <div class="machine-info">
-                <div class="machine-category-tag" style="background: rgba(46,196,182,0.1); color: var(--teal);"><i class="bi bi-gear-fill"></i> Milling Machine</div>
-                <h2 class="machine-title">Milling Machine</h2>
-                <p class="machine-description">High-precision CNC milling machine sourced from U.S. manufacturing facilities. Versatile equipment suitable for prototyping, production runs, and complex part geometries. Well-maintained and ready for operation.</p>
-                <div class="machine-highlights">
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> Precision Machining</div>
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> Production Ready</div>
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> Well Maintained</div>
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> U.S. Sourced</div>
-                </div>
-                <div class="machine-action-bar">
-                  <a href="contact.html" class="btn-primary-custom"><i class="bi bi-envelope"></i> Inquire</a>
-                  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inquiry"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                </div>
+        <!-- Machine 4: Milling Machine (Redesigned Card) -->
+        <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="milling" id="machine-milling">
+          <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative" style="height: 250px;">
+              <!-- Still Image -->
+              <img src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14.webp" alt="Milling Machine"
+                style="width: 100%; height: 100%; object-fit: cover;">
+              <!-- View More Images Button -->
+              <button class="btn btn-light position-absolute btn-sm"
+                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
+                data-bs-toggle="modal" data-bs-target="#modalMillingImages">
+                <i class="bi bi-images"></i> View Gallery
+              </button>
+            </div>
+            <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
+              <div class="machine-category-tag" style="background: rgba(46,196,182,0.1); color: var(--teal);"><i
+                  class="bi bi-gear-fill"></i> Milling Machine</div>
+              <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">Milling
+                Machine</h2>
+
+              <ul class="machine-specs-bullets"
+                style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; color: var(--dark-gray);">
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Condition:</strong> Well Maintained
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Type:</strong> High-precision CNC
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Sourced:</strong> U.S. Facilities
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Usage:</strong> Prototyping,
+                  Production</li>
+              </ul>
+
+              <div class="machine-action-bar mt-auto flex-wrap" style="gap: 10px;">
+                <a href="contact.html" class="btn-primary-custom"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-envelope"></i> Inquire</a>
+                <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer"
+                  class="btn-whatsapp-inquiry"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-whatsapp"></i> WhatsApp</a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Machine 5: Grinding Machine -->
-        <div class="col-lg-4 col-md-6 col-sm-12 reveal" id="machine-grinding">
-          <div class="machine-detail-card">
-            <div class="machine-detail-inner">
-              <div class="machine-gallery">
-                <div id="carouselGrinding" class="carousel slide machine-carousel" data-bs-ride="false">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="pic/Grinding machine/WhatsApp Image 2026-06-06 at 12.19.10.webp" alt="Grinding Machine - View" loading="lazy">
-                    </div>
-                  </div>
-                </div>
-                <span class="machine-status-badge in-stock"><i class="bi bi-check-circle-fill"></i> In Stock</span>
-              </div>
-              <div class="machine-info">
-                <div class="machine-category-tag" style="background: rgba(139,92,246,0.1); color: #8b5cf6;"><i class="bi bi-gear-fill"></i> Grinding Machine</div>
-                <h2 class="machine-title">Grinding Machine</h2>
-                <p class="machine-description">Premium grinding machine ideal for achieving superior surface finishes and tight tolerances. Perfect for tool rooms, die shops, and precision manufacturing environments. Sourced from reputable U.S. facilities.</p>
-                <div class="machine-highlights">
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> Superior Finish</div>
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> Tight Tolerances</div>
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> Tool Room Grade</div>
-                  <div class="highlight-chip"><i class="bi bi-check-circle-fill"></i> U.S. Sourced</div>
-                </div>
-                <div class="machine-action-bar">
-                  <a href="contact.html" class="btn-primary-custom"><i class="bi bi-envelope"></i> Inquire</a>
-                  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="btn-whatsapp-inquiry"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-                </div>
+        <!-- Machine 5: Grinding Machine (Redesigned Card) -->
+        <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="grinding" id="machine-grinding">
+          <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
+            <div class="position-relative" style="height: 250px;">
+              <!-- Still Image -->
+              <img src="img/grinding_machine/grinding_machine.jpeg" alt="Grinding Machine"
+                style="width: 100%; height: 100%; object-fit: cover;">
+              <!-- View More Images Button -->
+              <button class="btn btn-light position-absolute btn-sm"
+                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
+                data-bs-toggle="modal" data-bs-target="#modalGrindingImages">
+                <i class="bi bi-images"></i> View Gallery
+              </button>
+            </div>
+            <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
+              <div class="machine-category-tag" style="background: rgba(139,92,246,0.1); color: #8b5cf6;"><i
+                  class="bi bi-gear-fill"></i> Grinding Machine</div>
+              <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">Grinding
+                Machine</h2>
+
+              <ul class="machine-specs-bullets"
+                style="list-style: none; padding: 0; margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8; color: var(--dark-gray);">
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Finish:</strong> Superior Surface
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Tolerance:</strong> Tight
+                  Tolerances</li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Grade:</strong> Tool Room Grade
+                </li>
+                <li><i class="bi bi-dot text-primary fs-5 align-middle"></i> <strong>Sourced:</strong> U.S. Facilities
+                </li>
+              </ul>
+
+              <div class="machine-action-bar mt-auto flex-wrap" style="gap: 10px;">
+                <a href="contact.html" class="btn-primary-custom"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-envelope"></i> Inquire</a>
+                <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer"
+                  class="btn-whatsapp-inquiry"
+                  style="flex: 1; padding: 10px; text-align: center; font-size: 0.9rem; justify-content: center;"><i
+                    class="bi bi-whatsapp"></i> WhatsApp</a>
               </div>
             </div>
           </div>
@@ -454,82 +351,27 @@
       </div>
 
       <!-- Custom Sourcing CTA -->
-      <div class="mt-5 pt-4 reveal">
-        <div class="cta-box" style="text-align: center;">
-          <div style="position: relative; z-index: 2;">
-            <div class="section-label" style="background: rgba(255,255,255,0.12); color: var(--white); margin-bottom: 15px;"><i class="bi bi-search"></i> Custom Sourcing</div>
-            <h2 style="font-size: 1.8rem;">Can't Find What You're Looking For?</h2>
-            <p style="max-width: 600px; margin: 10px auto 25px;">We offer custom machine sourcing services. Tell us your specific requirements — make, model, specifications — and we'll find it for you from our extensive U.S. network of manufacturers and dealers.</p>
-            <a href="contact.html" class="btn-primary-custom" style="background: var(--white); color: var(--primary);">
-              <i class="bi bi-send"></i> Send Your Requirements
-            </a>
-          </div>
-        </div>
-      </div>
+
 
     </div>
   </section>
 
-  <!-- Shipping Section -->
-  <section class="global-section">
-    <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6 reveal-left">
-          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
-            <img src="pic/shipping.webp" alt="Worldwide Shipping" style="width: 100%; height: 350px; object-fit: cover;" width="600" height="350" loading="lazy">
-          </div>
-        </div>
-        <div class="col-lg-6 reveal-right">
-          <div class="section-label" style="background: rgba(255,255,255,0.1); color: var(--white);"><i class="bi bi-truck"></i> Logistics</div>
-          <h2 style="font-size: 2rem; margin-bottom: 15px;">Worldwide Shipping & Logistics</h2>
-          <p style="opacity: 0.85; font-size: 1.05rem; line-height: 1.8; margin-bottom: 25px;">
-            We handle the entire logistics chain — from machine packaging and crating at U.S. facilities to port delivery, ocean freight, and customs documentation. Our experienced team ensures your machinery arrives safely at your doorstep, anywhere in the world.
-          </p>
-          <div class="row g-3">
-            <div class="col-6">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="bi bi-check-circle-fill" style="color: var(--gold); font-size: 1.2rem;"></i>
-                <span style="font-weight: 600; font-size: 0.9rem;">Container Loading</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="bi bi-check-circle-fill" style="color: var(--gold); font-size: 1.2rem;"></i>
-                <span style="font-weight: 600; font-size: 0.9rem;">Ocean Freight</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="bi bi-check-circle-fill" style="color: var(--gold); font-size: 1.2rem;"></i>
-                <span style="font-weight: 600; font-size: 0.9rem;">Customs Documentation</span>
-              </div>
-            </div>
-            <div class="col-6">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <i class="bi bi-check-circle-fill" style="color: var(--gold); font-size: 1.2rem;"></i>
-                <span style="font-weight: 600; font-size: 0.9rem;">Door-to-Port Delivery</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer footer-colorful">
     <div class="footer-top-accent"></div>
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-4">
-          <div class="footer-brand">
-            <img src="pic/logo.jpg" alt="Northstar Logo" width="75" height="75" loading="lazy">
-            <span class="footer-brand-text">NorthStar International LLC</span>
+        <div class="col-lg-4 text-center">
+          <div class="footer-brand justify-content-center">
+            <img src="img/logo_icon.png" alt="NorthStar International" loading="lazy">
+            <div class="footer-brand-text text-start">
+              <span class="footer-brand-name"><span class="footer-brand-main">NorthStar</span> <span
+                  class="footer-brand-sub">International</span></span>
+              <span class="footer-brand-tagline">Premium CNC Machines from USA</span>
+            </div>
           </div>
-          <p class="footer-description">
-            A leading buyer, seller and exporter of high-quality used CNC machines from the United States. Serving manufacturers worldwide with reliable pre-owned industrial equipment.
-          </p>
-          <div class="footer-social">
+          <div class="footer-social justify-content-center">
             <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
@@ -577,7 +419,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Northstar International LLC. All Rights Reserved. | Portland, Oregon, USA</p>
+        <p>&copy; 2025 Northstar International LLC. All Rights Reserved. | Portland, Oregon, USA | Designed and developed by <a href="https://1roofads.com" target="_blank" rel="noopener noreferrer">1Roof Ads</a></p>
       </div>
     </div>
   </footer>
@@ -588,9 +430,11 @@
   </button>
 
   <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/919872660055" target="_blank" rel="noopener noreferrer" class="whatsapp-float"
+    aria-label="Chat on WhatsApp">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="white">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
     </svg>
   </a>
 
@@ -618,9 +462,205 @@
     </button>
   </div>
 
+  <!-- Modal for EXCEL PMC Images -->
+  <div class="modal fade" id="modalExcelImages" tabindex="-1" aria-labelledby="modalExcelImagesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
+            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselExcelModal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow-lg">
+              <div class="carousel-item active">
+                <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.45.jpeg" class="d-block w-100 rounded"
+                  alt="EXCEL PMC 10T24 View 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46%20(1).jpeg"
+                  class="d-block w-100 rounded" alt="EXCEL PMC 10T24 View 2">
+              </div>
+              <div class="carousel-item">
+                <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46.jpeg" class="d-block w-100 rounded"
+                  alt="EXCEL PMC 10T24 View 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExcelModal"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExcelModal"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for BRIDGEPORT Images -->
+  <div class="modal fade" id="modalBridgeportImages" tabindex="-1" aria-labelledby="modalBridgeportImagesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
+            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselBridgeportModal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow-lg">
+              <div class="carousel-item active">
+                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(1).jpeg"
+                  class="d-block w-100 rounded" alt="BRIDGEPORT View 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(2).jpeg"
+                  class="d-block w-100 rounded" alt="BRIDGEPORT View 2">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(3).jpeg"
+                  class="d-block w-100 rounded" alt="BRIDGEPORT View 3">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13.jpeg"
+                  class="d-block w-100 rounded" alt="BRIDGEPORT View 4">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg"
+                  class="d-block w-100 rounded" alt="BRIDGEPORT View 5">
+              </div>
+              <div class="carousel-item">
+                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.50.jpeg"
+                  class="d-block w-100 rounded" alt="BRIDGEPORT View 6">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBridgeportModal"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBridgeportModal"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for DOOSAN Images -->
+  <div class="modal fade" id="modalDoosanImages" tabindex="-1" aria-labelledby="modalDoosanImagesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
+            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselDoosanModal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow-lg">
+              <div class="carousel-item active">
+                <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50%20(1).jpeg"
+                  class="d-block w-100 rounded" alt="DOOSAN View 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50.jpeg" class="d-block w-100 rounded"
+                  alt="DOOSAN View 2">
+              </div>
+              <div class="carousel-item">
+                <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg" class="d-block w-100 rounded"
+                  alt="DOOSAN View 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDoosanModal"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselDoosanModal"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Milling Images -->
+  <div class="modal fade" id="modalMillingImages" tabindex="-1" aria-labelledby="modalMillingImagesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
+            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselMillingModal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow-lg">
+              <div class="carousel-item active">
+                <img src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14.webp" class="d-block w-100 rounded"
+                  alt="Milling View 1">
+              </div>
+              <div class="carousel-item">
+                <img src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14%20(1).webp"
+                  class="d-block w-100 rounded" alt="Milling View 2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMillingModal"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselMillingModal"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Grinding Images -->
+  <div class="modal fade" id="modalGrindingImages" tabindex="-1" aria-labelledby="modalGrindingImagesLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
+            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
+        </div>
+        <div class="modal-body">
+          <div id="carouselGrindingModal" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded shadow-lg">
+              <div class="carousel-item active">
+                <img src="img/grinding_machine/grinding_machine.jpeg" class="d-block w-100 rounded"
+                  alt="Grinding View 1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Bootstrap 5.3 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
 </body>
+
 </html>

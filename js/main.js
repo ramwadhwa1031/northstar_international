@@ -5,6 +5,16 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   
+  // --- Fixed Header: offset body so content isn't hidden ---
+  const stickyHeader = document.getElementById('stickyHeader');
+  function setHeaderOffset() {
+    if (stickyHeader) {
+      document.body.style.paddingTop = stickyHeader.offsetHeight + 'px';
+    }
+  }
+  setHeaderOffset();
+  window.addEventListener('resize', setHeaderOffset);
+
   // --- Navbar Scroll State & Back-to-Top Toggle ---
   const navbar = document.querySelector('.navbar-custom');
   const scrollTop = document.querySelector('.scroll-top');
