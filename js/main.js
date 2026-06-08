@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const navbarCollapse = document.querySelector('.navbar-collapse');
   if (navbarCollapse) {
     // Close on link click
-    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
       link.addEventListener('click', () => {
         const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
         if (bsCollapse) {
@@ -117,22 +117,36 @@ document.addEventListener('DOMContentLoaded', function() {
   const inventoryCards = document.querySelectorAll('.inventory-item');
 
   if (filterBtns.length > 0) {
+    function applyFilter(filter) {
+      filterBtns.forEach(b => {
+        if (b.dataset.filter === filter) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      inventoryCards.forEach(card => {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
     filterBtns.forEach(btn => {
       btn.addEventListener('click', function() {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        this.classList.add('active');
-
-        const filter = this.dataset.filter;
-
-        inventoryCards.forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.style.display = '';
-          } else {
-            card.style.display = 'none';
-          }
-        });
+        applyFilter(this.dataset.filter);
       });
     });
+
+    // Check URL for filter param
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterParam = urlParams.get('filter');
+    if (filterParam) {
+      applyFilter(filterParam);
+    }
   }
 
   // --- Contact Form Submission & Mailto Composer ---

@@ -55,7 +55,7 @@
   --font-body: 'Inter', sans-serif;
 
   /* Spacing */
-  --section-pad: 100px 0;
+  --section-pad: 50px 0;
   --container-max: 1200px;
 
   /* Transitions */
@@ -240,11 +240,11 @@ ul {
 
 /* --- Top Contact Bar --- */
 .top-contact-bar {
-  background: var(--primary-dark);
+  background: #3666a2;
   color: rgba(255, 255, 255, 0.9);
   padding: 8px 0;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .top-bar-inner {
@@ -261,8 +261,8 @@ ul {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   transition: color 0.2s ease;
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 500;
 }
 
 .top-bar-item:hover {
@@ -327,12 +327,13 @@ ul {
 }
 
 .navbar-brand .brand-name {
-  font-size: 1.8rem;
-  font-weight: 900;
+  font-size: 1.1rem;
+  font-weight: 800;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-transform: uppercase;
 }
 
 .navbar-brand .brand-main {
@@ -345,13 +346,13 @@ ul {
 }
 
 .brand-tagline {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--accent);
-  letter-spacing: 0.5px;
+  font-size: 0.55rem;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 2px;
-  -webkit-text-fill-color: var(--accent);
+  -webkit-text-fill-color: var(--text-light);
 }
 
 /* Nav Social Icons */
@@ -1779,11 +1780,11 @@ ul {
 .about-content h2 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: var(--text);
+  color: #000;
 }
 
 .about-text {
-  color: var(--text);
+  color: #000;
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 30px;
@@ -1795,7 +1796,7 @@ ul {
   gap: 8px;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--text);
+  color: #000;
   padding: 6px 0;
 }
 
@@ -1862,7 +1863,7 @@ ul {
 .about-feature-item span {
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--text);
+  color: #000;
 }
 
 /* --- Services / Inventory Preview --- */
@@ -2153,7 +2154,7 @@ ul {
   display: flex;
   overflow: visible;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
   padding: 24px 0;
   user-select: none;
@@ -2167,9 +2168,10 @@ ul {
 
 .brands-marquee {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
   width: 100%;
   min-width: auto;
   animation: none !important;
@@ -2185,10 +2187,12 @@ ul {
 }
 
 .brand-img-direct {
-  max-height: 80px;
-  width: auto;
+  max-height: 60px; /* Reduced to help fit better on smaller screens */
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
   object-fit: contain;
-  margin: 10px;
+  margin: 0;
   transition: var(--transition);
 }
 
@@ -2676,6 +2680,13 @@ ul {
   height: 3px;
   background: var(--gradient-accent);
   border-radius: 2px;
+}
+
+@media (max-width: 991.98px) {
+  .footer h5.text-center::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
 }
 
 .footer-links li {
@@ -3363,7 +3374,17 @@ ul {
   }
 
   .brands-marquee {
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .brand-img-direct {
+    flex: 0 0 calc(25% - 15px);
+    max-width: calc(25% - 15px);
+    min-width: auto;
+    height: auto;
+    max-height: 45px;
   }
 
   .brand-item {
@@ -4746,9 +4767,17 @@ a.client-gallery-card {
 }
 
 @keyframes glowText {
-  0% { text-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary); }
-  50% { text-shadow: 0 0 5px var(--accent), 0 0 15px var(--accent); }
-  100% { text-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary); }
+  0% {
+    text-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
+
+  50% {
+    text-shadow: 0 0 5px var(--accent), 0 0 15px var(--accent);
+  }
+
+  100% {
+    text-shadow: 0 0 2px var(--primary), 0 0 5px var(--primary);
+  }
 }
 
 .footer.footer-colorful .footer-bottom p a {
@@ -5161,4 +5190,9 @@ a.client-gallery-card {
   .machine-action-bar {
     flex-direction: row;
   }
+}
+/* Mobile Dropdown Fix */
+@media (max-width: 991.98px) {
+  .dropdown-menu { white-space: normal; }
+  .dropdown-item { white-space: normal; overflow-wrap: break-word; }
 }

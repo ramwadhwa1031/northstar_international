@@ -64,10 +64,9 @@
     <nav class="navbar navbar-expand-lg navbar-custom" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/logo_icon.png" alt="NorthStar International">
+          <img src="img/logo.svg" alt="NorthStar International">
           <div class="brand-text">
-            <span class="brand-name"><span class="brand-main">NorthStar</span> <span
-                class="brand-sub">International</span></span>
+            <span class="brand-name">NorthStar International</span>
             <span class="brand-tagline">Premium CNC Machines from USA</span>
           </div>
         </a>
@@ -80,19 +79,34 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
+            <!-- Desktop Inventory Link -->
+            <li class="nav-item d-none d-lg-block">
               <a class="nav-link active" href="inventory.html">Inventory</a>
             </li>
+            <!-- Mobile Inventory Dropdown -->
+            <li class="nav-item dropdown d-lg-none">
+              <a class="nav-link active dropdown-toggle" href="#" id="inventoryMobileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Inventory
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="inventoryMobileDropdown">
+                <li><a class="dropdown-item" href="inventory.html?filter=all">All Machines</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=turning">CNC Turning Centers</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=vmc">Vertical Machining Centre VMC</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=hmc">Horizontal Machining Centres HMC</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=milling">Milling</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=grinding">Grinding</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=fabrication">Sheet Metal & Fabrication</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=other">Other Machines</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
             <li class="nav-item ms-lg-3">
               <div class="nav-social-icons">
                 <a href="#" aria-label="Facebook" class="nav-social-link"><i class="bi bi-facebook"></i></a>
                 <a href="#" aria-label="LinkedIn" class="nav-social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="YouTube" class="nav-social-link"><i class="bi bi-youtube"></i></a>
                 <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email" class="nav-social-link"><i
                     class="bi bi-envelope-fill"></i></a>
               </div>
@@ -107,7 +121,7 @@
   <section class="inventory-detail-section">
     <div class="container">
       <!-- Filter Buttons -->
-      <div class="row mb-5 reveal">
+      <div class="row mb-5 reveal d-none d-lg-block">
         <div class="col-12 text-center">
           <div class="d-flex flex-wrap justify-content-center gap-2">
             <button class="btn btn-outline-primary filter-btn active" data-filter="all">All Machines</button>
@@ -130,16 +144,15 @@
         <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="vmc" id="machine-excel-pmc">
           <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
             <div class="position-relative" style="height: 250px;">
-              <!-- Still Image -->
-              <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46%20(1).jpeg" alt="EXCEL PMC 10T24"
-                style="width: 100%; height: 100%; object-fit: cover;">
-              <!-- View More Images Button -->
-              <button class="btn btn-light position-absolute btn-sm"
-                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
-                data-bs-toggle="modal" data-bs-target="#modalExcelImages">
-                <i class="bi bi-images"></i> View Gallery
+              <img id="img-excel" src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.45.jpeg" alt="EXCEL PMC 10T24" style="width: 100%; height: 100%; object-fit: cover;">
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('excel', -1)">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('excel', 1)">
+                <i class="bi bi-chevron-right"></i>
               </button>
             </div>
+
             <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
               <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">EXCEL PMC
                 10T24</h2>
@@ -165,16 +178,15 @@
         <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="vmc" id="machine-bridgeport">
           <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
             <div class="position-relative" style="height: 250px;">
-              <!-- Still Image -->
-              <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg" alt="BRIDGEPORT 3020"
-                style="width: 100%; height: 100%; object-fit: cover;">
-              <!-- View More Images Button -->
-              <button class="btn btn-light position-absolute btn-sm"
-                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
-                data-bs-toggle="modal" data-bs-target="#modalBridgeportImages">
-                <i class="bi bi-images"></i> View Gallery
+              <img id="img-bridgeport" src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(1).jpeg" alt="BRIDGEPORT 3020" style="width: 100%; height: 100%; object-fit: cover;">
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('bridgeport', -1)">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('bridgeport', 1)">
+                <i class="bi bi-chevron-right"></i>
               </button>
             </div>
+
             <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
               <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">BRIDGEPORT
                 3020</h2>
@@ -200,16 +212,15 @@
         <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="hmc" id="machine-doosan">
           <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
             <div class="position-relative" style="height: 250px;">
-              <!-- Still Image -->
-              <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50%20(1).jpeg" alt="DOOSAN DHP 4000"
-                style="width: 100%; height: 100%; object-fit: cover;">
-              <!-- View More Images Button -->
-              <button class="btn btn-light position-absolute btn-sm"
-                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
-                data-bs-toggle="modal" data-bs-target="#modalDoosanImages">
-                <i class="bi bi-images"></i> View Gallery
+              <img id="img-doosan" src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50%20(1).jpeg" alt="DOOSAN DHP 4000" style="width: 100%; height: 100%; object-fit: cover;">
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('doosan', -1)">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('doosan', 1)">
+                <i class="bi bi-chevron-right"></i>
               </button>
             </div>
+
             <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
 
               <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">DOOSAN DHP
@@ -235,16 +246,15 @@
         <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="milling" id="machine-milling">
           <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
             <div class="position-relative" style="height: 250px;">
-              <!-- Still Image -->
-              <img src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14.webp" alt="Milling Machine"
-                style="width: 100%; height: 100%; object-fit: cover;">
-              <!-- View More Images Button -->
-              <button class="btn btn-light position-absolute btn-sm"
-                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
-                data-bs-toggle="modal" data-bs-target="#modalMillingImages">
-                <i class="bi bi-images"></i> View Gallery
+              <img id="img-milling" src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14.webp" alt="Milling Machine" style="width: 100%; height: 100%; object-fit: cover;">
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; left: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('milling', -1)">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="btn btn-light position-absolute btn-sm" style="top: 50%; right: 10px; transform: translateY(-50%); z-index: 10; opacity: 0.8; padding: 4px 8px;" onclick="changeImage('milling', 1)">
+                <i class="bi bi-chevron-right"></i>
               </button>
             </div>
+
             <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
 
               <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">Milling
@@ -271,16 +281,9 @@
         <div class="col-lg-4 col-md-6 col-sm-12 inventory-item reveal" data-category="grinding" id="machine-grinding">
           <div class="machine-detail-card h-100 d-flex flex-column overflow-hidden">
             <div class="position-relative" style="height: 250px;">
-              <!-- Still Image -->
-              <img src="img/grinding_machine/grinding_machine.jpeg" alt="Grinding Machine"
-                style="width: 100%; height: 100%; object-fit: cover;">
-              <!-- View More Images Button -->
-              <button class="btn btn-light position-absolute btn-sm"
-                style="bottom: 10px; right: 10px; z-index: 10; border-radius: 4px; box-shadow: var(--shadow-sm); font-weight: 600;"
-                data-bs-toggle="modal" data-bs-target="#modalGrindingImages">
-                <i class="bi bi-images"></i> View Gallery
-              </button>
+              <img id="img-grinding" src="img/grinding_machine/grinding_machine.jpeg" alt="Grinding Machine" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
+
             <div class="machine-info flex-grow-1" style="padding: 25px; display: flex; flex-direction: column;">
 
               <h2 class="machine-title" style="font-size: 1.5rem; margin-top: 10px; margin-bottom: 15px;">Grinding
@@ -313,63 +316,69 @@
 
 
   <!-- Footer -->
-  <footer class="footer footer-colorful">
+  <footer class="footer footer-colorful" id="footer">
     <div class="footer-top-accent"></div>
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-4 text-center">
-          <div class="footer-brand justify-content-center">
-            <img src="img/logo_icon.png" alt="NorthStar International" loading="lazy">
-            <div class="footer-brand-text text-start">
-              <span class="footer-brand-name"><span class="footer-brand-main">NorthStar</span> <span
-                  class="footer-brand-sub">International</span></span>
-              <span class="footer-brand-tagline">Premium CNC Machines from USA</span>
-            </div>
+        <!-- Section 1: Text -->
+        <div class="col-lg-4 text-center text-lg-start mt-lg-5 pt-lg-4">
+          <div style="font-size: 1.05rem; line-height: 1.6; color: var(--dark-gray, #333);">
+            Want to BUY/SELL CNC machines, Please reach us in either way at following with your requirements.<br><br>
+            Thanks<br>
+            <strong>NORTHSTAR INTERNATIONAL Team</strong>
           </div>
-          <div class="footer-social justify-content-center">
+          <div class="footer-social justify-content-center justify-content-lg-start mt-4">
             <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
             <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Inventory</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Get a Quote</a></li>
-          </ul>
+
+        <!-- Section 2: Enquiry Form -->
+        <div class="col-lg-4">
+          <h5 class="mb-4 text-center text-lg-start">Enquiry Form</h5>
+          <form action="#" method="post" class="footer-enquiry-form bg-white p-4 rounded shadow-sm">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Your Phone" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background-color: var(--accent-color); border: none;">Submit</button>
+          </form>
         </div>
-        <div class="col-lg-3 col-md-4">
-          <h5>Our Inventory</h5>
-          <ul class="footer-links">
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Turning Centers</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Vertical Machining Centers (VMC)</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Horizontal Machining Centers (HMC)</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Milling Machines</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Grinding Machines</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Other Machines</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <h5>Contact Info</h5>
-          <div class="footer-contact-item">
-            <div class="fci-icon"><i class="bi bi-geo-alt"></i></div>
-            <div class="fci-text">16138 NW Reliance Lane<br>Portland, Oregon 97229, USA</div>
-          </div>
-          <div class="footer-contact-item">
-            <div class="fci-icon"><i class="bi bi-telephone"></i></div>
-            <div class="fci-text">
-              <a href="tel:+18472624636">(847) 262-4636</a><br>
-              <a href="tel:+16465473828">(646) 547-3828</a>
+
+        <!-- Section 3: Contact Info + Map -->
+        <div class="col-lg-4">
+          <h5 class="mb-4 text-center text-lg-start">Contact Info</h5>
+          <div class="d-flex flex-column align-items-center align-items-lg-start">
+            <div class="text-start">
+              <div class="footer-contact-item">
+                <div class="fci-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="fci-text">16138 NW Reliance Lane<br>Portland, Oregon 97229, USA</div>
+              </div>
+              <div class="footer-contact-item mt-3">
+                <div class="fci-icon"><i class="bi bi-telephone"></i></div>
+                <div class="fci-text">
+                  <a href="tel:+18472624636">(847) 262-4636</a><br>
+                  <a href="tel:+16465473828">(646) 547-3828</a>
+                </div>
+              </div>
+              <div class="footer-contact-item mt-3">
+                <div class="fci-icon"><i class="bi bi-envelope"></i></div>
+                <div class="fci-text"><a href="mailto:atulgupta2077@rediffmail.com">atulgupta2077@rediffmail.com</a></div>
+              </div>
             </div>
           </div>
-          <div class="footer-contact-item">
-            <div class="fci-icon"><i class="bi bi-envelope"></i></div>
-            <div class="fci-text"><a href="mailto:atulgupta2077@rediffmail.com">atulgupta2077@rediffmail.com</a></div>
+          <div class="footer-map mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.8368866164227!2d-122.84439058443831!3d45.57375177910237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495066db2c21961%3A0xc6c4f03c0d8924b8!2s16138%20NW%20Reliance%20Ln%2C%20Portland%2C%20OR%2097229%2C%20USA!5e0!3m2!1sen!2sin!4v1689260000000!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
@@ -417,204 +426,62 @@
     </button>
   </div>
 
-  <!-- Modal for EXCEL PMC Images -->
-  <div class="modal fade" id="modalExcelImages" tabindex="-1" aria-labelledby="modalExcelImagesLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 pb-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
-            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
-        </div>
-        <div class="modal-body">
-          <div id="carouselExcelModal" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded shadow-lg">
-              <div class="carousel-item active">
-                <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.45.jpeg" class="d-block w-100 rounded"
-                  alt="EXCEL PMC 10T24 View 1">
-              </div>
-              <div class="carousel-item">
-                <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46%20(1).jpeg"
-                  class="d-block w-100 rounded" alt="EXCEL PMC 10T24 View 2">
-              </div>
-              <div class="carousel-item">
-                <img src="img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46.jpeg" class="d-block w-100 rounded"
-                  alt="EXCEL PMC 10T24 View 3">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExcelModal"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExcelModal"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal for BRIDGEPORT Images -->
-  <div class="modal fade" id="modalBridgeportImages" tabindex="-1" aria-labelledby="modalBridgeportImagesLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 pb-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
-            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
-        </div>
-        <div class="modal-body">
-          <div id="carouselBridgeportModal" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded shadow-lg">
-              <div class="carousel-item active">
-                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(1).jpeg"
-                  class="d-block w-100 rounded" alt="BRIDGEPORT View 1">
-              </div>
-              <div class="carousel-item">
-                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(2).jpeg"
-                  class="d-block w-100 rounded" alt="BRIDGEPORT View 2">
-              </div>
-              <div class="carousel-item">
-                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(3).jpeg"
-                  class="d-block w-100 rounded" alt="BRIDGEPORT View 3">
-              </div>
-              <div class="carousel-item">
-                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13.jpeg"
-                  class="d-block w-100 rounded" alt="BRIDGEPORT View 4">
-              </div>
-              <div class="carousel-item">
-                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg"
-                  class="d-block w-100 rounded" alt="BRIDGEPORT View 5">
-              </div>
-              <div class="carousel-item">
-                <img src="img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.50.jpeg"
-                  class="d-block w-100 rounded" alt="BRIDGEPORT View 6">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBridgeportModal"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselBridgeportModal"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal for DOOSAN Images -->
-  <div class="modal fade" id="modalDoosanImages" tabindex="-1" aria-labelledby="modalDoosanImagesLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 pb-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
-            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
-        </div>
-        <div class="modal-body">
-          <div id="carouselDoosanModal" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded shadow-lg">
-              <div class="carousel-item active">
-                <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50%20(1).jpeg"
-                  class="d-block w-100 rounded" alt="DOOSAN View 1">
-              </div>
-              <div class="carousel-item">
-                <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50.jpeg" class="d-block w-100 rounded"
-                  alt="DOOSAN View 2">
-              </div>
-              <div class="carousel-item">
-                <img src="img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg" class="d-block w-100 rounded"
-                  alt="DOOSAN View 3">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselDoosanModal"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselDoosanModal"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal for Milling Images -->
-  <div class="modal fade" id="modalMillingImages" tabindex="-1" aria-labelledby="modalMillingImagesLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 pb-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
-            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
-        </div>
-        <div class="modal-body">
-          <div id="carouselMillingModal" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded shadow-lg">
-              <div class="carousel-item active">
-                <img src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14.webp" class="d-block w-100 rounded"
-                  alt="Milling View 1">
-              </div>
-              <div class="carousel-item">
-                <img src="img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14%20(1).webp"
-                  class="d-block w-100 rounded" alt="Milling View 2">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselMillingModal"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselMillingModal"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal for Grinding Images -->
-  <div class="modal fade" id="modalGrindingImages" tabindex="-1" aria-labelledby="modalGrindingImagesLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-header border-0 pb-0">
-          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"
-            style="filter: invert(1) grayscale(100%) brightness(200%);"></button>
-        </div>
-        <div class="modal-body">
-          <div id="carouselGrindingModal" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner rounded shadow-lg">
-              <div class="carousel-item active">
-                <img src="img/grinding_machine/grinding_machine.jpeg" class="d-block w-100 rounded"
-                  alt="Grinding View 1">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Bootstrap 5.3 JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
   <!-- Custom JS -->
+  <script>
+    const machineImages = {
+      'excel': [
+        "img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.45.jpeg",
+        "img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46%20(1).jpeg",
+        "img/EXCEL/WhatsApp%20Image%202026-06-06%20at%2012.08.46.jpeg"
+      ],
+      'bridgeport': [
+        "img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(1).jpeg",
+        "img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(2).jpeg",
+        "img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13%20(3).jpeg",
+        "img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.09.13.jpeg",
+        "img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg",
+        "img/BRIDGEPORT/WhatsApp%20Image%202026-06-06%20at%2012.15.50.jpeg"
+      ],
+      'doosan': [
+        "img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50%20(1).jpeg",
+        "img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.50.jpeg",
+        "img/DOOSAN/WhatsApp%20Image%202026-06-06%20at%2012.15.49.jpeg"
+      ],
+      'milling': [
+        "img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14.webp",
+        "img/Milling/WhatsApp%20Image%202026-06-06%20at%2012.18.14%20(1).webp"
+      ]
+    };
+
+    const currentImageIndex = {
+      'excel': 0,
+      'bridgeport': 0,
+      'doosan': 0,
+      'milling': 0
+    };
+
+    function changeImage(machineId, direction) {
+      const images = machineImages[machineId];
+      if (!images || images.length <= 1) return;
+      
+      currentImageIndex[machineId] += direction;
+      
+      if (currentImageIndex[machineId] >= images.length) {
+        currentImageIndex[machineId] = 0;
+      } else if (currentImageIndex[machineId] < 0) {
+        currentImageIndex[machineId] = images.length - 1;
+      }
+      
+      const imgElement = document.getElementById('img-' + machineId);
+      if (imgElement) {
+        imgElement.src = images[currentImageIndex[machineId]];
+      }
+    }
+  </script>
+
   <script src="js/main.js"></script>
 </body>
 

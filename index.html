@@ -64,10 +64,9 @@
     <nav class="navbar navbar-expand-lg navbar-custom" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/logo_icon.png" alt="NorthStar International">
+          <img src="img/logo.svg" alt="NorthStar International">
           <div class="brand-text">
-            <span class="brand-name"><span class="brand-main">NorthStar</span> <span
-                class="brand-sub">International</span></span>
+            <span class="brand-name">NorthStar International</span>
             <span class="brand-tagline">Premium CNC Machines from USA</span>
           </div>
         </a>
@@ -80,19 +79,34 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
+            <!-- Desktop Inventory Link -->
+            <li class="nav-item d-none d-lg-block">
               <a class="nav-link" href="inventory.html">Inventory</a>
             </li>
+            <!-- Mobile Inventory Dropdown -->
+            <li class="nav-item dropdown d-lg-none">
+              <a class="nav-link dropdown-toggle" href="#" id="inventoryMobileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Inventory
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="inventoryMobileDropdown">
+                <li><a class="dropdown-item" href="inventory.html?filter=all">All Machines</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=turning">CNC Turning Centers</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=vmc">Vertical Machining Centre VMC</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=hmc">Horizontal Machining Centres HMC</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=milling">Milling</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=grinding">Grinding</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=fabrication">Sheet Metal & Fabrication</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=other">Other Machines</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="#footer">Contact</a>
             </li>
             <li class="nav-item ms-lg-3">
               <div class="nav-social-icons">
                 <a href="#" aria-label="Facebook" class="nav-social-link"><i class="bi bi-facebook"></i></a>
                 <a href="#" aria-label="LinkedIn" class="nav-social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="YouTube" class="nav-social-link"><i class="bi bi-youtube"></i></a>
                 <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email" class="nav-social-link"><i
                     class="bi bi-envelope-fill"></i></a>
               </div>
@@ -106,30 +120,38 @@
   <!-- Hero Section -->
   <section class="hero-split-section" id="hero">
     <div class="container">
-      <div class="row g-0 align-items-center hero-split-row">
-        <!-- Left: Text -->
-        <div class="col-lg-6 hero-split-text">
-          <div class="hero-split-text-inner">
-            <h1 class="hero-simple-title">
-              We BUY /SELL used CNC machines
-            </h1>
-            <div class="hero-simple-divider"></div>
-            <ul class="hero-simple-list">
-              <li><span class="hero-bullet">●</span> Unused, Excess, Downsizing machines</li>
-              <li><span class="hero-bullet">●</span> Closure, shut down units</li>
-              <li><span class="hero-bullet">●</span> Retiring from business</li>
-              <li><span class="hero-bullet">●</span> Vacating warehouse</li>
-            </ul>
-            <div class="hero-simple-buttons">
-              <a href="inventory.html" class="btn-primary-custom">
-                Explore Inventory <i class="bi bi-chevron-right ms-1"></i>
-              </a>
-            </div>
-          </div>
+      <!-- Top: Images -->
+      <div class="row g-4 align-items-center justify-content-center mb-5">
+        <!-- Left Image -->
+        <div class="col-10 col-sm-8 col-md-6 hero-split-image">
+          <img src="img/Banner_img.png" alt="CNC Machines" class="img-fluid">
         </div>
-        <!-- Right: Image -->
-        <div class="col-lg-6 hero-split-image">
-          <img src="img/Banner_img.png" alt="CNC Machines">
+        <!-- Right Image -->
+        <div class="col-10 col-sm-8 col-md-6 hero-split-image">
+          <img src="img/banner-2.png" alt="CNC Machines" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Bottom: Text -->
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h1 class="hero-simple-title mx-auto">
+            We BUY /SELL used CNC machines
+          </h1>
+          <div class="hero-simple-divider mx-auto"></div>
+          <ul
+            class="hero-simple-list d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-2 gap-md-4"
+            style="margin-bottom: 30px;">
+            <li><span class="hero-bullet">●</span> Unused, Excess, Downsizing machines</li>
+            <li><span class="hero-bullet">●</span> Closure, shut down units</li>
+            <li><span class="hero-bullet">●</span> Retiring from business</li>
+            <li><span class="hero-bullet">●</span> Vacating warehouse</li>
+          </ul>
+          <div class="hero-simple-buttons justify-content-center">
+            <a href="inventory.html" class="btn-primary-custom">
+              Explore Inventory <i class="bi bi-chevron-right ms-1"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -139,281 +161,54 @@
   <section class="about-section" id="about">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-6 reveal-left">
-          <div class="about-image-wrapper">
-            <div class="about-image">
-              <img src="pic/about-office.webp" alt="Our Operations Center" width="600" height="400" loading="lazy">
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 reveal-right">
-          <div class="about-content">
-            <div class="section-label"> About Us</div>
-            <h2>Leading Buyer, Seller & Exporter of <span class="text-gradient-primary">Used CNC Machines</span></h2>
-            <p class="about-text">
-              <strong>Northstar International LLC</strong> is a leading U.S. buyer, seller, and exporter of high-quality
-              pre-owned CNC equipment (including VMC, HMC, Turning, and Milling machines) from top brands like Mazak,
-              Haas, Okuma, and Mori Seiki. We supply reliable machines globally, helping parts manufacturers across
-              Asia, Africa, Europe, and the Middle East save costs while handling all logistics, secure packing,
-              container loading, and customs clearance.
-            </p>
+        <div class="col-lg-12 reveal-right">
+          <div class="about-content text-center">
+            <div class="section-label mx-auto mb-3">About Us</div>
+            <div class="about-text text-start mx-auto"
+              style="max-width: 900px; font-size: 1.05rem; line-height: 1.7; color: #000;">
+              <p class="mb-4">
+                <strong>NORTHSTAR INTERNATIONAL LLC</strong> is a leading Buyer / Seller and exporter of high-quality
+                used CNC machines from the United States. We specialize in sourcing and supplying reliable pre-owned CNC
+                equipment to parts manufacturers, engineering companies, automotive parts makers, aerospace workshops,
+                die-mold makers, and metalworking industries worldwide. Our customers across Asia, Africa, the Middle
+                East, and Europe benefit from significant cost savings while obtaining reliable machines that increase
+                production capacity and profitability. We can supply your desired machines to your desired country and
+                across the US with all proper packing, logistics, container loading, export documentation, and other
+                custom clearance formalities.
+              </p>
 
-            <a href="about.html" class="btn-secondary-custom mt-2">
-              <i class="bi bi-arrow-right"></i> Learn More About Us
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Our Machines Gallery Section (moved under About Us) -->
-  <section class="client-gallery-section" id="client-gallery">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label"><span class="material-icons-outlined" style="font-size:1rem;"></span> Our
-          Machines</div>
-        <h2 class="section-title">Machines from Our <span class="text-gradient">Inventory</span></h2>
-        <div class="section-divider"></div>
-      </div>
-      <div class="client-gallery-grid">
-        <a href="inventory.html" class="client-gallery-card">
-          <img src="pic/unnamed (1).webp" alt="Mori Seiki MV-55 Vertical Machining Center" width="600" height="400"
-            loading="lazy">
-          <div class="client-gallery-overlay">
-            <h4>Mori Seiki MV-55</h4>
-            <p>Vertical Machining Center</p>
-            <span class="gallery-view-btn"><i class="bi bi-arrow-right-circle"></i> View Inventory</span>
-          </div>
-        </a>
-        <a href="inventory.html" class="client-gallery-card">
-          <img src="pic/unnamed.webp" alt="Daewoo Puma 230 CNC Turning Center" width="600" height="400" loading="lazy">
-          <div class="client-gallery-overlay">
-            <h4>Daewoo Puma 230</h4>
-            <p>CNC Turning Center</p>
-            <span class="gallery-view-btn"><i class="bi bi-arrow-right-circle"></i> View Inventory</span>
-          </div>
-        </a>
-      </div>
-      <div style="text-align: center; margin-top: 40px;">
-        <a href="inventory.html" class="btn-secondary-custom">
-          <i class="bi bi-grid"></i> View All Inventory
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured VMC & HMC Machinery Section (Commented out)
-  <section class="featured-machinery-section" id="featured-machinery">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label"><i class="bi bi-gear-fill"></i> Core Categories</div>
-        <h2 class="section-title">Featured <span class="text-gradient">CNC Machinery</span></h2>
-        <p class="section-description">We specialize in exporting high-precision Vertical and Horizontal Machining Centers from top-tier American facilities.</p>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="featured-machinery-grid">
-        [VMC Card]
-        <div class="machinery-card">
-          <div class="machinery-card-img">
-            <img src="pic/cnc-vmc.webp" alt="CNC Vertical Machining Center" loading="lazy">
-            <span class="machinery-badge">VMC Solutions</span>
-          </div>
-          <div class="machinery-card-content">
-            <h3>Vertical Machining Centers (VMC)</h3>
-            <p>Ideal for 3-axis, 4-axis, and 5-axis milling, mold/die manufacturing, and aerospace parts. Features a vertical spindle orientation for high rigidity, ease of access, and precision tooling operations on complex surfaces.</p>
-            <ul class="machinery-specs-list">
-              <li><i class="bi bi-check-circle-fill"></i> 3, 4, &amp; 5-Axis Capability</li>
-              <li><i class="bi bi-check-circle-fill"></i> High-Speed Spindles (Up to 15k RPM)</li>
-              <li><i class="bi bi-check-circle-fill"></i> Rigid Cast-Iron Base Design</li>
-              <li><i class="bi bi-check-circle-fill"></i> Precision Tool Setup &amp; Access</li>
-            </ul>
-            <div class="machinery-brands-row">
-              <span class="machinery-brands-label">Top Brands:</span>
-              <span class="machinery-brands-list">Haas VF, Mazak VCN, Hurco, Makino</span>
-            </div>
-          </div>
-        </div>
-
-        [HMC Card]
-        <div class="machinery-card">
-          <div class="machinery-card-img">
-            <img src="pic/hero-cnc.webp" alt="CNC Horizontal Machining Center" loading="lazy">
-            <span class="machinery-badge">HMC Solutions</span>
-          </div>
-          <div class="machinery-card-content">
-            <h3>Horizontal Machining Centers (HMC)</h3>
-            <p>Built for continuous, high-volume production. Utilizing a horizontal spindle orientation, multi-pallet changers, and tombstone workholding fixtures, HMCs achieve maximum productivity and outstanding chip evacuation.</p>
-            <ul class="machinery-specs-list">
-              <li><i class="bi bi-check-circle-fill"></i> Automatic Pallet Changers (APC)</li>
-              <li><i class="bi bi-check-circle-fill"></i> Natural Gravity Chip Fall</li>
-              <li><i class="bi bi-check-circle-fill"></i> Tombstone Multi-Part Fixturing</li>
-              <li><i class="bi bi-check-circle-fill"></i> Unattended (Lights-Out) Machining</li>
-            </ul>
-            <div class="machinery-brands-row">
-              <span class="machinery-brands-label">Top Brands:</span>
-              <span class="machinery-brands-list">Mazak Horizon, Okuma MB, Mori Seiki, Makino a-Series</span>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h5 class="text-primary mb-3" style="font-weight: 700; font-size: 1.1rem;">Our inventory regularly
+                    includes:</h5>
+                  <ul class="mb-0" style="list-style: none; padding: 0;">
+                    <li class="mb-1"><i class="bi bi-check2-circle text-accent me-2"></i>Vertical Machining Center</li>
+                    <li class="mb-1"><i class="bi bi-check2-circle text-accent me-2"></i>Horizontal Machining Centers
+                    </li>
+                    <li class="mb-1"><i class="bi bi-check2-circle text-accent me-2"></i>CNC Turning Centers &amp;
+                      Lathes</li>
+                    <li class="mb-1"><i class="bi bi-check2-circle text-accent me-2"></i>Milling &amp; Grinding Machines
+                    </li>
+                    <li class="mb-1"><i class="bi bi-check2-circle text-accent me-2"></i>CNC Boring Machines</li>
+                    <li class="mb-0"><i class="bi bi-check2-circle text-accent me-2"></i>Sheet Metal &amp; Fabrication
+                      Equipment</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h5 class="text-primary mb-3" style="font-weight: 700; font-size: 1.1rem;">Machines from renowned
+                    brands:</h5>
+                  <p class="mb-0" style="line-height: 1.8;">
+                    Mazak, Haas, Hurco, Fadal, Okuma, Mori Seiki, Makino, Doosan, Hyundai, Fanuc, Mitsubishi, Kitamura,
+                    Brother, Takisawa, YCM Supermax, Feeler, Hardinge, Bridgeport, Excel and many others.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  -->
-
-  <!-- Services / What We Offer (Commented out for now) -->
-  <!--
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label"><i class="bi bi-grid-3x3-gap"></i> Our Inventory</div>
-        <h2 class="section-title">What We <span class="text-accent">Offer</span></h2>
-        <p class="section-description">Our inventory regularly includes a wide range of premium CNC equipment from top U.S. manufacturing facilities.</p>
-        <div class="section-divider"></div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6 reveal delay-1">
-          <div class="service-card tilt-card" data-color="blue">
-            <div class="service-card-img-header">
-              <img src="pic/cnc-vmc.webp" alt="CNC Vertical Machining Centers" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">01</div>
-              <div class="service-icon blue"><span class="material-icons-outlined">precision_manufacturing</span></div>
-              <h4>CNC Vertical Machining Centers</h4>
-              <p>High-precision VMCs from leading manufacturers. Ideal for mold making, aerospace parts, and precision engineering applications.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-2">
-          <div class="service-card tilt-card" data-color="red">
-            <div class="service-card-img-header">
-              <img src="pic/hero-cnc.webp" alt="CNC Horizontal Machining Centers" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">02</div>
-              <div class="service-icon red"><span class="material-icons-outlined">view_in_ar</span></div>
-              <h4>CNC Horizontal Machining Centers</h4>
-              <p>Multi-axis HMCs for high-volume production. Equipped with pallet changers and automatic tool changers for maximum throughput.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-3">
-          <div class="service-card tilt-card" data-color="green">
-            <div class="service-card-img-header">
-              <img src="pic/cnc-lathe.webp" alt="CNC Turning Centers &amp; Lathes" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">03</div>
-              <div class="service-icon green"><span class="material-icons-outlined">autorenew</span></div>
-              <h4>CNC Turning Centers &amp; Lathes</h4>
-              <p>From 2-axis to multi-axis turning centers with live tooling. Suitable for automotive, medical, and general engineering parts.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-4">
-          <div class="service-card tilt-card" data-color="gold">
-            <div class="service-card-img-header">
-              <img src="pic/cnc-vmc.webp" alt="CNC Milling Machines" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">04</div>
-              <div class="service-icon gold"><span class="material-icons-outlined">build</span></div>
-              <h4>CNC Milling Machines</h4>
-              <p>Versatile CNC mills for prototyping to production. Available in bed-type and knee-type configurations from top brands.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-5">
-          <div class="service-card tilt-card" data-color="navy">
-            <div class="service-card-img-header">
-              <img src="pic/hero-cnc.webp" alt="CNC Grinding Machines" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">05</div>
-              <div class="service-icon navy"><span class="material-icons-outlined">grain</span></div>
-              <h4>CNC Grinding Machines</h4>
-              <p>Surface grinders, cylindrical grinders, and centerless grinders for achieving superior surface finishes and tight tolerances.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-6">
-          <div class="service-card tilt-card" data-color="orange">
-            <div class="service-card-img-header">
-              <img src="pic/cnc-lathe.webp" alt="CNC EDM Machines" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">06</div>
-              <div class="service-icon orange"><span class="material-icons-outlined">electric_bolt</span></div>
-              <h4>CNC EDM Machines</h4>
-              <p>Wire EDM and sinker EDM machines for intricate die and mold work. Precision electrical discharge machining solutions.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-1">
-          <div class="service-card tilt-card" data-color="purple">
-            <div class="service-card-img-header">
-              <img src="pic/hero-cnc.webp" alt="CNC Boring Machines" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">07</div>
-              <div class="service-icon purple"><span class="material-icons-outlined">engineering</span></div>
-              <h4>CNC Boring Machines</h4>
-              <p>Horizontal boring mills for large-scale machining operations. Capable of handling heavy workpieces with precision.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-2">
-          <div class="service-card tilt-card" data-color="teal">
-            <div class="service-card-img-header">
-              <img src="pic/shipping.webp" alt="Sheet Metal &amp; Fabrication" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">08</div>
-              <div class="service-icon teal"><span class="material-icons-outlined">construction</span></div>
-              <h4>Sheet Metal &amp; Fabrication</h4>
-              <p>Press brakes, shears, laser cutters, and plasma cutters. Complete fabrication equipment for sheet metal industries.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 reveal delay-3">
-          <div class="service-card tilt-card" data-color="steel">
-            <div class="service-card-img-header">
-              <img src="pic/about-office.webp" alt="Industrial Robots &amp; Automation" loading="lazy">
-            </div>
-            <div class="service-card-body">
-              <div class="service-card-glow"></div>
-              <div class="service-card-number">09</div>
-              <div class="service-icon steel"><span class="material-icons-outlined">smart_toy</span></div>
-              <h4>Industrial Robots &amp; Automation</h4>
-              <p>Robotic arms and automation systems from Fanuc, ABB, and KUKA. Enhance your production line with smart automation.</p>
-              <a href="inventory.html" class="service-card-link"><span>Explore</span> <i class="bi bi-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  -->
-
 
   <!-- Brands Marquee -->
   <section class="brands-section" id="brands">
@@ -436,26 +231,10 @@
         <img src="img/brands/10.png" alt="Trusted Brand 10" loading="lazy" class="brand-img-direct">
         <img src="img/brands/11.png" alt="Trusted Brand 11" loading="lazy" class="brand-img-direct">
         <img src="img/brands/12.png" alt="Trusted Brand 12" loading="lazy" class="brand-img-direct">
-        <img src="img/brands/13.png" alt="Trusted Brand 13" loading="lazy" class="brand-img-direct">
         <img src="img/brands/14.png" alt="Trusted Brand 14" loading="lazy" class="brand-img-direct">
       </div>
     </div>
   </section>
-
-  <!-- WE BUY & SELL Banner -->
-  <!-- <section class="buy-sell-banner" id="buy-sell">
-    <div class="container">
-      <div class="buy-sell-content">
-        <span class="material-icons-outlined buy-sell-icon">swap_horiz</span>
-        <h2>WE BUY & SELL USED CNC MACHINES</h2>
-        <p>Looking to sell your used CNC equipment or upgrade your manufacturing line? We deal in both buying and
-          selling premium pre-owned CNC machinery from the United States.</p>
-        <a href="contact.html" class="btn-primary-custom">
-          <i class="bi bi-envelope"></i> Get in Touch
-        </a>
-      </div>
-    </div>
-  </section> -->
 
 
   <!-- Footer -->
@@ -463,59 +242,65 @@
     <div class="footer-top-accent"></div>
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-4 text-center">
-          <div class="footer-brand justify-content-center">
-            <img src="img/logo_icon.png" alt="NorthStar International" loading="lazy">
-            <div class="footer-brand-text text-start">
-              <span class="footer-brand-name"><span class="footer-brand-main">NorthStar</span> <span
-                  class="footer-brand-sub">International</span></span>
-              <span class="footer-brand-tagline">Premium CNC Machines from USA</span>
-            </div>
+        <!-- Section 1: Text -->
+        <div class="col-lg-4 text-center text-lg-start mt-lg-5 pt-lg-4">
+          <div style="font-size: 1.05rem; line-height: 1.6; color: var(--dark-gray, #333);">
+            Want to BUY/SELL CNC machines, Please reach us in either way at following with your requirements.<br><br>
+            Thanks<br>
+            <strong>NORTHSTAR INTERNATIONAL Team</strong>
           </div>
-          <div class="footer-social justify-content-center">
+          <div class="footer-social justify-content-center justify-content-lg-start mt-4">
             <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
             <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Inventory</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Get a Quote</a></li>
-          </ul>
+
+        <!-- Section 2: Enquiry Form -->
+        <div class="col-lg-4">
+          <h5 class="mb-4 text-center text-lg-start">Enquiry Form</h5>
+          <form action="#" method="post" class="footer-enquiry-form bg-white p-4 rounded shadow-sm">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Your Phone" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark w-100" style="padding: 10px; font-weight: 600;">Submit Enquiry</button>
+          </form>
         </div>
-        <div class="col-lg-3 col-md-4">
-          <h5>Our Inventory</h5>
-          <ul class="footer-links">
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Turning Centers</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Vertical Machining Centers (VMC)</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Horizontal Machining Centers (HMC)</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Boring</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Sheet Metal & Fabrication</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Other Machines</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <h5>Contact Info</h5>
-          <div class="footer-contact-item">
-            <div class="fci-icon"><i class="bi bi-geo-alt"></i></div>
-            <div class="fci-text">16138 NW Reliance Lane<br>Portland, Oregon 97229, USA</div>
-          </div>
-          <div class="footer-contact-item">
-            <div class="fci-icon"><i class="bi bi-telephone"></i></div>
-            <div class="fci-text">
-              <a href="tel:+18472624636">(847) 262-4636</a><br>
-              <a href="tel:+16465473828">(646) 547-3828</a>
+
+        <!-- Section 3: Contact Info + Map -->
+        <div class="col-lg-4">
+          <h5 class="mb-4 text-center text-lg-start">Contact Info</h5>
+          <div class="d-flex flex-column align-items-center align-items-lg-start">
+            <div class="text-start">
+              <div class="footer-contact-item">
+                <div class="fci-icon"><i class="bi bi-geo-alt"></i></div>
+                <div class="fci-text">16138 NW Reliance Lane<br>Portland, Oregon 97229, USA</div>
+              </div>
+              <div class="footer-contact-item mt-3">
+                <div class="fci-icon"><i class="bi bi-telephone"></i></div>
+                <div class="fci-text">
+                  <a href="tel:+18472624636">(847) 262-4636</a><br>
+                  <a href="tel:+16465473828">(646) 547-3828</a>
+                </div>
+              </div>
+              <div class="footer-contact-item mt-3">
+                <div class="fci-icon"><i class="bi bi-envelope"></i></div>
+                <div class="fci-text"><a href="mailto:atulgupta2077@rediffmail.com">atulgupta2077@rediffmail.com</a></div>
+              </div>
             </div>
           </div>
-          <div class="footer-contact-item">
-            <div class="fci-icon"><i class="bi bi-envelope"></i></div>
-            <div class="fci-text"><a href="mailto:atulgupta2077@rediffmail.com">atulgupta2077@rediffmail.com</a></div>
+          <div class="footer-map mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.8368866164227!2d-122.84439058443831!3d45.57375177910237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495066db2c21961%3A0xc6c4f03c0d8924b8!2s16138%20NW%20Reliance%20Ln%2C%20Portland%2C%20OR%2097229%2C%20USA!5e0!3m2!1sen!2sin!4v1689260000000!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>

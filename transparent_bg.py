@@ -60,9 +60,9 @@ def flood_fill_transparent(img_path):
         print(f"Failed processing {img_path}: {e}")
         return None
 
-print("Processing logo and hero banner...")
-logo = r"C:\Users\DELL\Downloads\USAWEB\img\logo_icon.png"
-banner = r"C:\Users\DELL\Downloads\USAWEB\img\Banner_img.jpeg"
+print("Processing banners...")
+banner1 = r"C:\Users\DELL\Downloads\USAWEB\img\Banner_img.png"
+banner2 = r"C:\Users\DELL\Downloads\USAWEB\img\banner-2.jpeg"
 
-flood_fill_transparent(logo)
-flood_fill_transparent(banner)
+flood_fill_transparent(banner1)
+flood_fill_transparent(banner2)

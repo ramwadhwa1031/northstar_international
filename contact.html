@@ -58,10 +58,9 @@
     <nav class="navbar navbar-expand-lg navbar-custom" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="img/logo_icon.png" alt="NorthStar International">
+          <img src="img/logo.svg" alt="NorthStar International">
           <div class="brand-text">
-            <span class="brand-name"><span class="brand-main">NorthStar</span> <span
-                class="brand-sub">International</span></span>
+            <span class="brand-name">NorthStar International</span>
             <span class="brand-tagline">Premium CNC Machines from USA</span>
           </div>
         </a>
@@ -74,11 +73,25 @@
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
+            <!-- Desktop Inventory Link -->
+            <li class="nav-item d-none d-lg-block">
               <a class="nav-link" href="inventory.html">Inventory</a>
+            </li>
+            <!-- Mobile Inventory Dropdown -->
+            <li class="nav-item dropdown d-lg-none">
+              <a class="nav-link dropdown-toggle" href="#" id="inventoryMobileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Inventory
+              </a>
+              <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="inventoryMobileDropdown">
+                <li><a class="dropdown-item" href="inventory.html?filter=all">All Machines</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=turning">CNC Turning Centers</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=vmc">Vertical Machining Centre VMC</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=hmc">Horizontal Machining Centres HMC</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=milling">Milling</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=grinding">Grinding</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=fabrication">Sheet Metal & Fabrication</a></li>
+                <li><a class="dropdown-item" href="inventory.html?filter=other">Other Machines</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="contact.html">Contact</a>
@@ -87,6 +100,7 @@
               <div class="nav-social-icons">
                 <a href="#" aria-label="Facebook" class="nav-social-link"><i class="bi bi-facebook"></i></a>
                 <a href="#" aria-label="LinkedIn" class="nav-social-link"><i class="bi bi-linkedin"></i></a>
+                <a href="#" aria-label="YouTube" class="nav-social-link"><i class="bi bi-youtube"></i></a>
                 <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email" class="nav-social-link"><i
                     class="bi bi-envelope-fill"></i></a>
               </div>
@@ -241,58 +255,61 @@
     <div class="footer-top-accent"></div>
     <div class="container">
       <div class="row g-5">
-        <div class="col-lg-4 text-center">
-          <div class="footer-brand justify-content-center">
-            <img src="img/logo_icon.png" alt="NorthStar International" loading="lazy">
-            <div class="footer-brand-text text-start">
-              <span class="footer-brand-name"><span class="footer-brand-main">NorthStar</span> <span class="footer-brand-sub">International</span></span>
-              <span class="footer-brand-tagline">Premium CNC Machines from USA</span>
-            </div>
+        <!-- Section 1: Text -->
+        <div class="col-lg-4 text-center text-lg-start mt-lg-5 pt-lg-4">
+          <div style="font-size: 1.05rem; line-height: 1.6; color: var(--dark-gray, #333);">
+            Want to BUY/SELL CNC machines, Please reach us in either way at following with your requirements.<br><br>
+            Thanks<br>
+            <strong>NORTHSTAR INTERNATIONAL Team</strong>
           </div>
-          <div class="footer-social justify-content-center">
+          <div class="footer-social justify-content-center justify-content-lg-start mt-4">
             <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
             <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
             <a href="mailto:atulgupta2077@rediffmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
-        <div class="col-lg-2 col-md-4">
-          <h5>Quick Links</h5>
-          <ul class="footer-links">
-            <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
-            <li><a href="about.html"><i class="bi bi-chevron-right"></i> About Us</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Inventory</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
-            <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Get a Quote</a></li>
-          </ul>
+
+        <!-- Section 2: Enquiry Form -->
+        <div class="col-lg-4">
+          <h5 class="mb-4 text-center text-lg-start">Enquiry Form</h5>
+          <form action="#" method="post" class="footer-enquiry-form bg-white p-4 rounded shadow-sm">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Your Phone" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="3" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background-color: var(--accent-color); border: none;">Submit</button>
+          </form>
         </div>
-        <div class="col-lg-3 col-md-4">
-          <h5>Our Inventory</h5>
-          <ul class="footer-links">
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Turning Centers</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Vertical Machining Centers (VMC)</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Horizontal Machining Centers (HMC)</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> CNC Boring</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Sheet Metal & Fabrication</a></li>
-            <li><a href="inventory.html"><i class="bi bi-chevron-right"></i> Other Machines</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-4">
-          <h5>Contact Info</h5>
-          <div class="footer-contact-item">
+
+        <!-- Section 3: Contact Info + Map -->
+        <div class="col-lg-4">
+          <h5 class="mb-4 text-center text-lg-start">Contact Info</h5>
+          <div class="footer-contact-item justify-content-center justify-content-lg-start">
             <div class="fci-icon"><i class="bi bi-geo-alt"></i></div>
             <div class="fci-text">16138 NW Reliance Lane<br>Portland, Oregon 97229, USA</div>
           </div>
-          <div class="footer-contact-item">
+          <div class="footer-contact-item justify-content-center justify-content-lg-start mt-3">
             <div class="fci-icon"><i class="bi bi-telephone"></i></div>
             <div class="fci-text">
               <a href="tel:+18472624636">(847) 262-4636</a><br>
               <a href="tel:+16465473828">(646) 547-3828</a>
             </div>
           </div>
-          <div class="footer-contact-item">
+          <div class="footer-contact-item justify-content-center justify-content-lg-start mt-3">
             <div class="fci-icon"><i class="bi bi-envelope"></i></div>
             <div class="fci-text"><a href="mailto:atulgupta2077@rediffmail.com">atulgupta2077@rediffmail.com</a></div>
+          </div>
+          <div class="footer-map mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2792.8368866164227!2d-122.84439058443831!3d45.57375177910237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5495066db2c21961%3A0xc6c4f03c0d8924b8!2s16138%20NW%20Reliance%20Ln%2C%20Portland%2C%20OR%2097229%2C%20USA!5e0!3m2!1sen!2sin!4v1689260000000!5m2!1sen!2sin" width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
