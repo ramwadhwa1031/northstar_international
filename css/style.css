@@ -577,7 +577,16 @@ ul {
   }
 
   .hero-split-image {
-    margin-top: 20px;
+    margin-top: 0;
+  }
+
+  .hero-split-image img {
+    height: auto;
+  }
+
+  .hero-split-section .row.g-4 {
+    --bs-gutter-y: 0;
+    --bs-gutter-x: 0;
   }
 }
 
@@ -599,7 +608,15 @@ ul {
   }
 
   .hero-split-image {
-    margin-top: 24px;
+    margin-top: 0;
+  }
+
+  .hero-split-image img {
+    height: auto;
+  }
+
+  .hero-split-section .row.g-4 {
+    --bs-gutter-y: 0;
   }
 }
 
