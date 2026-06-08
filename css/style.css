@@ -84,6 +84,7 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -519,7 +520,7 @@ ul {
 
 .hero-split-image img {
   width: 100%;
-  height: auto;
+  height: 420px;
   object-fit: contain;
   display: block;
 }
@@ -2171,10 +2172,9 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 10px;
-  width: 100%;
+  gap: 5px;
+  width: 87%;
   min-width: auto;
-  animation: none !important;
   /* disable marquee animation completely */
 }
 
@@ -2187,7 +2187,8 @@ ul {
 }
 
 .brand-img-direct {
-  max-height: 60px; /* Reduced to help fit better on smaller screens */
+  max-height: 60px;
+  /* Reduced to help fit better on smaller screens */
   flex: 1 1 0;
   min-width: 0;
   width: 100%;
@@ -3378,7 +3379,7 @@ ul {
     justify-content: center;
     gap: 15px;
   }
-  
+
   .brand-img-direct {
     flex: 0 0 calc(25% - 15px);
     max-width: calc(25% - 15px);
@@ -5191,8 +5192,15 @@ a.client-gallery-card {
     flex-direction: row;
   }
 }
+
 /* Mobile Dropdown Fix */
 @media (max-width: 991.98px) {
-  .dropdown-menu { white-space: normal; }
-  .dropdown-item { white-space: normal; overflow-wrap: break-word; }
+  .dropdown-menu {
+    white-space: normal;
+  }
+
+  .dropdown-item {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
 }

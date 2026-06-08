@@ -75,7 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault();
       const target = document.querySelector(targetId);
       if (target) {
-        const offsetTop = target.offsetTop - 85;
+        const headerHeight = stickyHeader ? stickyHeader.offsetHeight : 0;
+        const offsetTop = target.offsetTop - headerHeight - 20;
         window.scrollTo({
           top: offsetTop,
           behavior: 'smooth'
