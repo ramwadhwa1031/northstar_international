@@ -3,8 +3,8 @@
    Functional interactions (No display animations)
    ============================================================ */
 
-document.addEventListener('DOMContentLoaded', function() {
-  
+document.addEventListener('DOMContentLoaded', function () {
+
   // --- Fixed Header: offset body so content isn't hidden ---
   const stickyHeader = document.getElementById('stickyHeader');
   function setHeaderOffset() {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Scroll to top click event
   if (scrollTop) {
-    scrollTop.addEventListener('click', function() {
+    scrollTop.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPage || 
-        (currentPage === '' && href === 'index.html') ||
-        (currentPage === '/' && href === 'index.html')) {
+    if (href === currentPage ||
+      (currentPage === '' && href === 'index.html') ||
+      (currentPage === '/' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // --- Smooth Scroll for Anchor Links ---
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       e.preventDefault();
       const target = document.querySelector(targetId);
       if (target) {
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close on click outside
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', function (event) {
       const isClickInsideNavbar = navbarCollapse.contains(event.target);
       const navbarToggler = document.querySelector('.navbar-toggler');
       const isNavbarToggler = navbarToggler && navbarToggler.contains(event.target);
-      
+
       if (!isClickInsideNavbar && !isNavbarToggler && navbarCollapse.classList.contains('show')) {
         const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
         if (bsCollapse) {
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     filterBtns.forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function () {
         applyFilter(this.dataset.filter);
       });
     });
@@ -153,9 +153,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // --- Contact Form Submission & Mailto Composer ---
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       const formData = new FormData(contactForm);
       const data = {};
       formData.forEach((value, key) => data[key] = value);
@@ -199,7 +199,7 @@ Please reply with the availability, detailed specifications, pricing, and freigh
 Best regards,
 ${data.name}`;
 
-        const mailtoLink = `mailto:atulgupta2077@rediffmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+        const mailtoLink = `mailto:northstarinternationalllc1@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
 
         // Open user's email client
         window.location.href = mailtoLink;
@@ -214,7 +214,7 @@ ${data.name}`;
     });
 
     contactForm.querySelectorAll('[required]').forEach(field => {
-      field.addEventListener('input', function() {
+      field.addEventListener('input', function () {
         if (this.value.trim()) {
           this.classList.remove('is-invalid');
         }
@@ -235,7 +235,7 @@ ${data.name}`;
   // --- Close Floating Call Popup on outside click ---
   const callWrapper = document.getElementById('callFloatWrapper');
   if (callWrapper) {
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
       if (!callWrapper.contains(e.target)) {
         callWrapper.classList.remove('active');
       }
